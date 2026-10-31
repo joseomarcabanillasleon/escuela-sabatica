@@ -1,7 +1,7 @@
 {
-  "name": "Escuela Sabática · Juegos para la clase",
-  "short_name": "Escuela Sabática",
-  "description": "Juegos de la Escuela Sabática para proyectar en clase: lecciones y misioneros.",
+  "name": "Mi Biblia, mi tesoro · Juegos de Escuela Sabática",
+  "short_name": "Mi Biblia, mi tesoro",
+  "description": "Archivo de casos de detectives para la Escuela Sabática: lecciones y misioneros.",
   "lang": "es",
   "start_url": "./",
   "scope": "./",

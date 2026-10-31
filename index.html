@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Escuela Sabática · Juegos para la clase</title>
+<title>Mi Biblia, mi tesoro · Archivo de casos</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2E2018">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Escuela Sabática">
+<meta name="apple-mobile-web-app-title" content="Mi Biblia, mi tesoro">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,22 +21,37 @@
 html,body{margin:0;height:100%;overflow:hidden;background:#2E2018}
 body{font-family:var(--body);color:var(--ink)}
 #stage{position:absolute;left:0;top:0;width:1280px;height:720px;transform-origin:0 0;border-radius:10px;background:#4A3426;padding:10px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
-.paper{position:relative;width:100%;height:100%;border-radius:6px;overflow:hidden;background-color:var(--paper);padding:28px 40px;
+.paper{position:relative;width:100%;height:100%;border-radius:6px;overflow:hidden;background-color:var(--paper);padding:24px 34px;
  background-image:radial-gradient(circle at 10% 8%,rgba(176,128,64,.18),rgba(176,128,64,0) 30%),radial-gradient(circle at 92% 92%,rgba(150,104,52,.18),rgba(150,104,52,0) 32%),linear-gradient(rgba(110,130,150,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(110,130,150,.09) 1px,transparent 1px);
  background-size:auto,auto,24px 24px,24px 24px;box-shadow:inset 0 0 80px rgba(120,80,30,.28)}
 .tape{position:absolute;width:130px;height:32px;background:rgba(178,198,180,.8);z-index:1}
-h1{font-family:var(--type);font-weight:400;margin:0;font-size:54px;line-height:1.05}
-.label{display:inline-block;padding:7px 15px;background:var(--kraft);font-family:var(--type);font-size:18px;letter-spacing:2px;transform:rotate(-2deg);box-shadow:0 2px 4px rgba(0,0,0,.18)}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:26px}
-.game{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 18px 22px;background:var(--card);border:3px solid var(--ink);border-radius:12px;box-shadow:0 8px 0 #9E8458,0 14px 24px rgba(0,0,0,.18);text-decoration:none;color:var(--ink);transition:transform .12s}
-.game:active{transform:translateY(4px)}
-.game:nth-child(1){transform:rotate(-1.5deg)}.game:nth-child(2){transform:rotate(1deg)}.game:nth-child(3){transform:rotate(-.8deg)}
-.game .art{width:200px;height:200px;border-radius:50%;background:#E9DCC0;display:flex;align-items:center;justify-content:center;border:4px solid var(--ink)}
-.game .kind{font-family:var(--type);font-size:16px;letter-spacing:2px;padding:5px 12px;border-radius:20px;color:#fff}
-.game .t{font-family:var(--type);font-size:28px;text-align:center;line-height:1.1}
-.game .s{font-family:var(--hand);font-size:30px;color:var(--sepia);text-align:center;line-height:1}
-.game .go{margin-top:6px;font-family:var(--type);font-size:22px;background:var(--red);color:#fff;padding:12px 26px;border-radius:8px;box-shadow:0 4px 0 var(--red-d);display:inline-flex;align-items:center;gap:10px}
-.tools{position:absolute;right:40px;top:28px;display:flex;gap:8px;z-index:3}
+h1{font-family:var(--type);font-weight:400;margin:0;font-size:46px;line-height:1.05}
+.label{display:inline-block;padding:7px 15px;background:var(--kraft);font-family:var(--type);font-size:17px;letter-spacing:2px;transform:rotate(-2deg);box-shadow:0 2px 4px rgba(0,0,0,.18)}
+.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:14px}
+.feat{perspective:1400px}
+.game{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;padding:30px 16px 18px;background:linear-gradient(#E3C792,#D4AE68);border:3px solid #9E7B4F;border-radius:6px 12px 12px 12px;box-shadow:0 10px 0 #8C6A3A,0 22px 30px rgba(0,0,0,.3);text-decoration:none;color:var(--ink);transform-style:preserve-3d;transition:transform .25s;animation:fold .8s cubic-bezier(.2,1.3,.4,1) backwards}
+.game:before{content:"";position:absolute;top:-26px;left:-3px;width:180px;height:28px;background:#D4AE68;border:3px solid #9E7B4F;border-bottom:0;border-radius:10px 10px 0 0}
+.game:nth-child(1){transform:rotateX(8deg) rotate(-1.5deg)}.game:nth-child(2){transform:rotateX(8deg) rotate(1.2deg);animation-delay:.15s}
+.game:hover{transform:rotateX(0) translateZ(30px)}
+.game:active{transform:rotateX(14deg) translateY(6px)}
+@keyframes fold{0%{opacity:0;transform:rotateX(70deg) translateY(-80px)}100%{opacity:1}}
+.cno{position:absolute;top:-22px;left:14px;font-family:var(--type);font-size:15px;letter-spacing:2px;color:#6E2A1A}
+.seal{position:absolute;right:-18px;top:-18px;background:rgba(253,251,245,.85);width:74px;height:74px;border-radius:50%;border:4px double #B5352A;color:#B5352A;font-family:var(--type);font-size:12px;display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(14deg);line-height:1.1}
+.game img{width:160px;height:160px;border-radius:20px;box-shadow:0 8px 14px rgba(0,0,0,.25);transform:translateZ(20px)}
+.kind{font-family:var(--type);font-size:15px;letter-spacing:2px;padding:5px 12px;border-radius:20px;color:#fff}
+.game .t{font-family:var(--type);font-size:27px;text-align:center;line-height:1.1}
+.game .s{font-family:var(--hand);font-size:29px;color:var(--sepia);text-align:center;line-height:1}
+.go{margin-top:4px;font-family:var(--type);font-size:22px;background:var(--red);color:#fff;padding:12px 26px;border-radius:8px;box-shadow:0 4px 0 var(--red-d)}
+#list{position:absolute;right:34px;top:96px;bottom:24px;width:420px;overflow-y:auto;overscroll-behavior:contain;padding:4px 10px 4px 4px}
+.wk{font-family:var(--type);font-size:16px;letter-spacing:1px;color:var(--sepia);margin:12px 0 6px}
+.wk.now{color:var(--red)}
+.row{display:flex;align-items:center;gap:12px;padding:8px 10px;margin-bottom:8px;background:var(--card);border:2px solid var(--ink);border-radius:10px;text-decoration:none;color:var(--ink);min-height:64px}
+.row img{width:48px;height:48px;border-radius:10px;flex:none}
+.row .n{font-family:var(--type);font-size:13px;color:#6E2A1A;letter-spacing:1px}
+.row .t{font-family:var(--type);font-size:18px;line-height:1.1}
+.row .s{font-size:14px;color:var(--sepia)}
+.row.past{opacity:.7}
+.tools{position:absolute;right:34px;top:24px;display:flex;gap:8px;z-index:3}
 .ib{width:56px;height:56px;border-radius:50%;border:3px solid var(--ink);background:var(--paper);cursor:pointer;display:flex;align-items:center;justify-content:center}
 #ov{position:absolute;inset:0;background:rgba(46,32,24,.55);display:none;align-items:center;justify-content:center;z-index:20}
 #ov.on{display:flex}
@@ -50,39 +65,38 @@ h1{font-family:var(--type);font-weight:400;margin:0;font-size:54px;line-height:1
 <div id="wrap" style="position:fixed;inset:0;overflow:hidden"><div id="stage"><div class="paper">
 <div class="tape" style="top:-6px;left:-30px;transform:rotate(-32deg)"></div><div class="tape" style="top:-6px;right:-30px;transform:rotate(32deg)"></div>
 <div class="tools"><button class="ib" id="fsBtn" aria-label="Pantalla completa"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3A2E26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></div>
-<span class="label">ESCUELA SABÁTICA · 4.º TRIMESTRE 2026</span>
-<h1 style="margin-top:14px">Detectives del Diario</h1>
-<div style="font-family:var(--hand);font-size:38px;color:#8E3B2B;line-height:1">Elige el juego de esta semana</div>
-<div class="grid">
- <a class="game" href="croacia/">
-  <span class="kind" style="background:#2F4C7A">MISIÓN · CROACIA</span>
-  <div class="art"><svg viewBox="0 0 64 64" width="150" height="150" aria-hidden="true"><path d="M14 8h36v24c0 14-18 24-18 24S14 46 14 32z" fill="#fff"/><g fill="#D9342B"><rect x="16" y="10" width="8" height="8"/><rect x="32" y="10" width="8" height="8"/><rect x="24" y="18" width="8" height="8"/><rect x="40" y="18" width="8" height="8"/><rect x="16" y="26" width="8" height="8"/><rect x="32" y="26" width="8" height="8"/><rect x="24" y="34" width="8" height="8"/><rect x="40" y="34" width="8" height="8"/></g><path d="M14 8h36v24c0 14-18 24-18 24S14 46 14 32z" fill="none" stroke="#3A2E26" stroke-width="3"/></svg></div>
-  <div class="t">El misterio de los planos perdidos</div><div class="s">Octubre · Teodor y Anastasia</div>
-  <span class="go">Jugar ▶</span></a>
- <a class="game" href="leccion-6/">
-  <span class="kind" style="background:#2F6F8F">LECCIÓN 6 · 7 NOV</span>
-  <div class="art"><svg viewBox="0 0 64 64" width="150" height="150" aria-hidden="true"><g fill="none" stroke="#3A2E26" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 40h48l-6 12H14z" fill="#B5764A"/><path d="M32 8v32"/><path d="M32 10l18 24H32z" fill="#FDFBF5"/><path d="M30 14 16 34h14z" fill="#E9DCC0"/></g><path d="M4 58c5-3 8-3 12 0s8 3 12 0 8-3 12 0 8 3 12 0 8-3 8 0" fill="none" stroke="#2F4C7A" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-  <div class="t">El último viaje de Pablo</div><div class="s">De vuelta a Jerusalén</div>
-  <span class="go">Jugar ▶</span></a>
- <a class="game" href="mision-kompas/">
-  <span class="kind" style="background:#B5122F">MISIÓN · POLONIA · 7 NOV</span>
-  <div class="art"><svg viewBox="0 0 64 64" width="150" height="150" aria-hidden="true"><g fill="none" stroke="#3A2E26" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 28 32 12l26 16"/><path d="M10 28v28h44V28" fill="#E9DCC0"/><rect x="27" y="40" width="10" height="16" fill="#B5764A"/><rect x="15" y="34" width="8" height="8" fill="#BFD7EA"/><rect x="41" y="34" width="8" height="8" fill="#BFD7EA"/><path d="M32 4v8M32 4h8v5h-8"/></g></svg></div>
-  <div class="t">Misión Kompas</div><div class="s">Cinco años orando · Filip</div>
-  <span class="go">Jugar ▶</span></a>
+<div style="width:740px">
+ <span class="label">ARCHIVO DE CASOS · 4.º TRIMESTRE 2026</span>
+ <h1 style="margin-top:12px">Mi Biblia, mi tesoro</h1>
+ <div style="font-family:var(--hand);font-size:34px;color:#8E3B2B;line-height:1" id="weekTitle"></div>
+ <div class="feat" id="feat"></div>
 </div>
+<div id="list"></div>
 <div id="ov"></div>
 </div></div></div>
 <div id="rot"><svg width="110" height="110" viewBox="0 0 64 64" fill="none" stroke="#F3EAD6" stroke-width="3" stroke-linecap="round" aria-hidden="true"><rect x="20" y="6" width="24" height="44" rx="4"/><path d="M29 44h6"/></svg>
 <div style="font-size:30px">Gira el móvil</div><div style="font-family:var(--body);font-size:20px;opacity:.85">Los juegos se ven en horizontal, como en la tele.</div>
 <button class="btn" id="rotOk" style="font-size:20px">Seguir así</button></div>
 <script>
-const $=s=>document.querySelector(s);let rotDismissed=false;
+const GAMES=[{"id": "croacia", "date": "2026-10-31", "kind": "Misión · Croacia", "cardTitle": "El misterio de los planos perdidos", "cardSub": "Teodor y Anastasia", "caseNo": 1, "color": "#2F4C7A"}, {"id": "leccion-6", "date": "2026-11-07", "kind": "Lección 6", "cardTitle": "El último viaje de Pablo", "cardSub": "De vuelta a Jerusalén", "caseNo": 2, "color": "#2F6F8F"}, {"id": "mision-kompas", "date": "2026-11-07", "kind": "Misión · Polonia", "cardTitle": "Misión Kompas", "cardSub": "Cinco años orando · Filip", "caseNo": 3, "color": "#DC143C"}, {"id": "leccion-7", "date": "2026-11-14", "kind": "Lección 7", "cardTitle": "Prisionero", "cardSub": "Caso Nº 4: el mensaje de la noche", "caseNo": 4, "color": "#34407A"}, {"id": "mision-14-nov", "date": "2026-11-14", "kind": "Misión · Polonia", "cardTitle": "Cómo multiplicar el dinero", "cardSub": "Caso Nº 5: las monedas que se multiplicaron", "caseNo": 5, "color": "#C8742A"}, {"id": "leccion-8", "date": "2026-11-21", "kind": "Lección 8", "cardTitle": "El preso inocente", "cardSub": "Caso Nº 6 · Predicando a gobernantes", "caseNo": 6, "color": "#7A3B2E"}, {"id": "mision-21-nov", "date": "2026-11-21", "kind": "Misión · Polonia", "cardTitle": "La amiga misteriosa", "cardSub": "Caso Nº 7 · La oración de Miriam", "caseNo": 7, "color": "#DC143C"}, {"id": "leccion-9", "date": "2026-11-28", "kind": "Lección 9", "cardTitle": "Pablo en Roma", "cardSub": "Caso nº 8: el barco perdido · Hechos 27–28", "caseNo": 8, "color": "#2F5E7C"}, {"id": "mision-28-nov", "date": "2026-11-28", "kind": "Misión · Polonia", "cardTitle": "La oración de Natan", "cardSub": "Caso nº 9: la plaza misteriosa · De Ucrania a Kompas", "caseNo": 9, "color": "#3D7CC9"}, {"id": "leccion-10", "date": "2026-12-05", "kind": "Lección 10", "cardTitle": "El día que esperamos", "cardSub": "Caso Nº 10 · Vigías del horizonte: ¿cómo volverá Jesús?", "caseNo": 10, "color": "#C8892B"}, {"id": "mision-5-dic", "date": "2026-12-05", "kind": "Misión · Polonia", "cardTitle": "Una mejor amiga", "cardSub": "Caso Nº 11 · Recompón las fotos rotas de Hanna y Polianna", "caseNo": 11, "color": "#DC143C"}, {"id": "leccion-11", "date": "2026-12-12", "kind": "Lección 11", "cardTitle": "¿Quién vivirá eternamente?", "cardSub": "Caso nº 12: un tablero 3D por equipos hasta la puerta de la ciudad de Dios", "caseNo": 12, "color": "#2F6F8F"}, {"id": "mision-12-dic", "date": "2026-12-12", "kind": "Misión · Polonia", "cardTitle": "La «Biblia grande»", "cardSub": "Caso nº 13: estantería bíblica 3D y carrera de búsqueda en la Biblia", "caseNo": 13, "color": "#DC143C"}, {"id": "leccion-12", "date": "2026-12-19", "kind": "Lección 12", "cardTitle": "Un hermoso nuevo mundo", "cardSub": "Caso nº 14 · El lugar que nadie ha imaginado", "caseNo": 14, "color": "#2E8B6A"}, {"id": "mision-19-dic", "date": "2026-12-19", "kind": "Misión · Reino Unido", "cardTitle": "La melodía misteriosa", "cardSub": "Caso nº 15 · Amarissa y la música", "caseNo": 15, "color": "#3D6FD1"}, {"id": "leccion-13", "date": "2026-12-26", "kind": "Lección 13", "cardTitle": "Y mientras esperamos… amor", "cardSub": "Caso Nº 16 · El mensaje sin vocales: la ruleta del amor", "caseNo": 16, "color": "#B5352A"}, {"id": "mision-26-dic", "date": "2026-12-26", "kind": "Misión · 13.er sábado", "cardTitle": "Tocar música para Jesús", "cardSub": "Caso Nº 17 · La partitura perdida: el gran concierto y el termómetro de la ofrenda", "caseNo": 17, "color": "#6A4C93"}];
+const $=s=>document.querySelector(s);const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const MES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const fdate=d=>{const [y,m,dd]=d.split("-").map(Number);return `${dd} de ${MES[m-1]}`;};
+const today=new Date();const t=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,"0")}-${String(today.getDate()).padStart(2,"0")}`;
+const dates=[...new Set(GAMES.map(g=>g.date))].sort();
+const cur=dates.find(d=>d>=t)||dates[dates.length-1];
+const icon=g=>`${g.id}/icon-192.png`;
+$("#weekTitle").textContent=(cur===t?"Hoy, sábado ":"Este sábado, ")+fdate(cur);
+$("#feat").innerHTML=GAMES.filter(g=>g.date===cur).map(g=>`<a class="game" href="${g.id}/">${g.caseNo?`<span class="cno">CASO Nº ${g.caseNo}</span>`:""}<span class="seal">CASO<br>ABIERTO</span><span class="kind" style="background:${g.color}">${esc(g.kind.toUpperCase())}</span><img src="${icon(g)}" alt=""><div class="t">${esc(g.cardTitle)}</div><div class="s">${esc(g.cardSub)}</div><span class="go">Jugar ▶</span></a>`).join("");
+$("#list").innerHTML=dates.map(d=>`<div class="wk ${d===cur?"now":""}">${d===cur?"★ ":""}SÁBADO ${esc(fdate(d).toUpperCase())}</div>`+GAMES.filter(g=>g.date===d).map(g=>`<a class="row ${d<cur?"past":""}" href="${g.id}/"><img src="${icon(g)}" alt=""><div>${g.caseNo?`<div class="n">CASO Nº ${g.caseNo}</div>`:""}<div class="t">${esc(g.cardTitle)}</div><div class="s">${esc(g.kind)}</div></div></a>`).join("")).join("");
+requestAnimationFrame(()=>{const n=document.querySelector(".wk.now");if(n)$("#list").scrollTop=n.offsetTop-110;});
+let rotDismissed=false;
 function fit(){const W=document.documentElement.clientWidth||innerWidth,H=document.documentElement.clientHeight||innerHeight,s=Math.min(W/1280,H/720);const st=$("#stage");st.style.transform=`scale(${s})`;st.style.left=((W-1280*s)/2)+"px";st.style.top=((H-720*s)/2)+"px";$("#rot").classList.toggle("on",!rotDismissed&&H>W*1.15&&W<900);}
 addEventListener("resize",fit);addEventListener("orientationchange",()=>setTimeout(fit,200));$("#rotOk").onclick=()=>{rotDismissed=true;fit();};
 const isIOS=/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
 const standalone=()=>matchMedia("(display-mode: fullscreen)").matches||matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
 if(standalone())$("#fsBtn").style.display="none";
-function showInstall(){const o=$("#ov");o.innerHTML=`<div class="ovcard"><div style="font-family:var(--type);font-size:36px;text-align:center;margin-bottom:10px">Pantalla completa</div>${isIOS?`Instálalo como app:<br><b>1.</b> Ábrelo en <b>Safari</b>.<br><b>2.</b> Toca <b>Compartir</b> → <b>Añadir a pantalla de inicio</b>.<br><b>3.</b> Abre el icono <b>Escuela Sabática</b>.`:`Instálalo como app:<br><b>1.</b> En Chrome, toca el menú <b>⋮</b>.<br><b>2.</b> Elige <b>Instalar aplicación</b> o <b>Añadir a pantalla de inicio</b>.<br><b>3.</b> Abre el icono <b>Escuela Sabática</b>.`}<div style="text-align:center;margin-top:16px"><button class="btn" id="ovOk">¡Entendido!</button></div></div>`;o.classList.add("on");$("#ovOk").onclick=()=>o.classList.remove("on");}
+function showInstall(){const o=$("#ov");o.innerHTML=`<div class="ovcard"><div style="font-family:var(--type);font-size:36px;text-align:center;margin-bottom:10px">Pantalla completa</div>${isIOS?`Instálalo como app:<br><b>1.</b> Ábrelo en <b>Safari</b>.<br><b>2.</b> Toca <b>Compartir</b> → <b>Añadir a pantalla de inicio</b>.<br><b>3.</b> Abre el icono <b>Mi Biblia, mi tesoro</b>.`:`Instálalo como app:<br><b>1.</b> En Chrome, toca el menú <b>⋮</b>.<br><b>2.</b> Elige <b>Instalar aplicación</b> o <b>Añadir a pantalla de inicio</b>.<br><b>3.</b> Abre el icono <b>Mi Biblia, mi tesoro</b>.`}<div style="text-align:center;margin-top:16px"><button class="btn" id="ovOk">¡Entendido!</button></div></div>`;o.classList.add("on");$("#ovOk").onclick=()=>o.classList.remove("on");}
 $("#fsBtn").onclick=()=>{const d=document,e=d.documentElement;if(d.fullscreenElement){d.exitFullscreen().catch(()=>{});return;}const r=e.requestFullscreen||e.webkitRequestFullscreen;if(!r){showInstall();return;}try{const p=r.call(e,{navigationUI:"hide"});if(p&&p.then)p.then(()=>{try{screen.orientation.lock("landscape").catch(()=>{});}catch(_){}}).catch(showInstall);}catch(_){showInstall();}};
 document.addEventListener("fullscreenchange",()=>setTimeout(fit,100));
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("sw.js").catch(()=>{});}
