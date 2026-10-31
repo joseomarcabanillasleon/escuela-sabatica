@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* ===== Misión · Polonia · 21 de noviembre · CASO Nº 7 ===== */
+/* ===== Misión · Polonia · 21 de noviembre · CASO Nº 16 ===== */
 document.head.insertAdjacentHTML("beforeend",`<style>
 .hud{gap:10px}.hud .st{min-width:44px;font-size:14px}.hud .turn{font-size:19px;padding:8px 14px}
 .m-flip{perspective:900px}
@@ -729,10 +729,10 @@ Object.assign(RET,{
 });
 
 const GAME={
- caseNo:7,caseTitle:"La amiga misteriosa",
+ caseNo:16,caseTitle:"La amiga misteriosa",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:620px;display:flex;flex-direction:column;gap:14px">
-   <span class="label" style="align-self:flex-start">CASO Nº 7 · MISIÓN · POLONIA</span>
+   <span class="label" style="align-self:flex-start">CASO Nº 16 · MISIÓN · POLONIA</span>
    <h1 style="font-size:62px;line-height:1.02">La amiga misteriosa</h1>
    <div class="hand" style="font-size:42px;line-height:1;color:#8E3B2B">Una niña pidió algo a Dios… ¿Qué pidió? ¿Cómo respondió?</div>
    <div style="margin-top:4px">${teamPickHTML}</div>
@@ -830,7 +830,7 @@ const GAME={
    overlay(`<div class="ovcard" style="min-width:640px"><div style="font-family:var(--type);font-size:28px">¡Foto de la clase de detectives!</div><div class="hand" style="font-size:40px">Todos juntos… decid: «¡Kompas!»</div><div id="phN" style="font-family:var(--type);font-size:120px;line-height:1;min-height:120px;color:var(--red)"></div></div>`);
    for(const n of ["3","2","1"]){if(!$("#phN"))return;$("#phN").textContent=n;tone("tick");await wait(900);}
    const fl=document.createElement("div");fl.className="m-flash";$("#paper").appendChild(fl);setTimeout(()=>fl.remove(),800);tone("stamp");
-   overlay(`<div class="ovcard"><div class="m-pol" style="animation:m-fall .9s cubic-bezier(.2,1.3,.4,1) both">${classPhoto(0,560,nKids)}<div class="hand" style="font-size:30px;text-align:center">Detectives del caso nº 7 · ${nKids} niños · 21-11-2026</div></div><div class="hand" style="font-size:30px">¡Nadie se queda fuera de la foto!</div><button class="btn main" id="ovOk">¡Genial!</button></div>`,true);
+   overlay(`<div class="ovcard"><div class="m-pol" style="animation:m-fall .9s cubic-bezier(.2,1.3,.4,1) both">${classPhoto(0,560,nKids)}<div class="hand" style="font-size:30px;text-align:center">Detectives del caso nº 16 · ${nKids} niños · 21-11-2026</div></div><div class="hand" style="font-size:30px">¡Nadie se queda fuera de la foto!</div><button class="btn main" id="ovOk">¡Genial!</button></div>`,true);
    $("#ovOk").onclick=()=>{closeOv();b.disabled=false;};};}
 };
 

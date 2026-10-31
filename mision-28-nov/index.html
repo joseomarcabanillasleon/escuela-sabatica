@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* Misión · Polonia · 28 de noviembre · «La oración de Natan» · CASO Nº 9 */
+/* Misión · Polonia · 28 de noviembre · «La oración de Natan» · CASO Nº 18 */
 (()=>{const st=document.createElement("style");st.textContent=`
 .m9-persp{perspective:1000px}
 .m9-cork{position:relative;background:#C49A6C radial-gradient(circle at 20% 30%,rgba(255,255,255,.12) 0 2px,transparent 3px) 0 0/14px 14px;border:12px solid #7A5534;border-radius:8px;box-shadow:0 22px 30px rgba(0,0,0,.35),inset 0 0 30px rgba(80,40,10,.35);transform-style:preserve-3d}
@@ -673,10 +673,10 @@ Object.assign(RET,{
   $("#spL").onclick=()=>{const left=placed.filter(p=>!found.has(p.w));if(!left.length)return;const p=left[lupas++%left.length];tone("tick");const e=cell(p.r0,p.c0);e.classList.remove("lupa");void e.offsetWidth;e.classList.add("lupa");const f=$("#spF");f.style.background="#DCEBF2";f.innerHTML=`${icon("lupa",70)}<div class="t">La lupa señala dónde empieza una palabra…</div>`;};}
 });
 
-const GAME={caseNo:9,caseTitle:"La plaza misteriosa",
+const GAME={caseNo:18,caseTitle:"La plaza misteriosa",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:610px;display:flex;flex-direction:column;gap:12px">
-   <span class="label" style="align-self:flex-start">CASO Nº 9 · MISIÓN · POLONIA · 28 NOV</span>
+   <span class="label" style="align-self:flex-start">CASO Nº 18 · MISIÓN · POLONIA · 28 NOV</span>
    <h1 style="font-size:60px;line-height:1.02">La plaza misteriosa</h1>
    <div class="hand" style="font-size:42px;line-height:1;color:#8E3B2B">La oración de Natan</div>
    <div style="font-size:23px;line-height:1.2;max-width:590px">Natan llegó a Polonia sin dinero para estudiar. Hoy va a la escuela Kompas. Detectives: ¿cómo lo consiguió?</div>
@@ -760,7 +760,7 @@ const GAME={caseNo:9,caseTitle:"La plaza misteriosa",
    {t:"Se quedó en la escuela pública",w:"¡Hoy estudia en Kompas!",ok:0},
    {t:"Oró, y llegó un patrocinador",w:"¡Pistas 4 y 5! Dios respondió su oración",ok:1}]);
   return `<div style="position:absolute;left:0;top:0;width:560px;bottom:0;display:flex;flex-direction:column;gap:14px;align-items:center">
-   <span class="label">TABLERO DEL CASO Nº 9</span>${cork(6,540,false)}
+   <span class="label">TABLERO DEL CASO Nº 18</span>${cork(6,540,false)}
    <div style="background:var(--blue);color:#F5F0E4;padding:14px 22px;border-radius:6px;align-self:stretch;text-align:center"><div class="hand" style="font-size:40px;line-height:1.05">«Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá.»</div><div style="font-family:var(--type);font-size:18px;color:var(--gold);margin-top:4px">MATEO 7:7 · RVR1960</div></div>
   </div>
   <div style="position:absolute;left:600px;right:0;top:56px;bottom:0;display:flex;flex-direction:column;gap:12px">
