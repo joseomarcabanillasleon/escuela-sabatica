@@ -115,7 +115,7 @@ button{font:inherit;color:inherit}
 <div class="hud" id="hud" style="display:none">
  <div class="stops" id="stops"></div><div class="spacer"></div><div class="turn" id="turn"></div><div class="spacer"></div>
  <div class="col" id="col"></div>
- <div class="tools"><button class="ib" id="homeBtn" aria-label="Volver al inicio"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#3A2E26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg></button><button class="ib fsBtn" aria-label="Pantalla completa"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3A2E26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button><button class="ib sndBtn" aria-label="Sonido"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3A2E26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/></svg></button></div>
+ <div class="tools"><button class="ib" id="diceBtn" aria-label="¿Quién responde?" style="background:#F2C98A"><svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="8" width="48" height="48" rx="9" fill="#FDFBF5" stroke="#3A2E26" stroke-width="4"/><g fill="#3A2E26"><circle cx="21" cy="21" r="5"/><circle cx="43" cy="21" r="5"/><circle cx="32" cy="32" r="5"/><circle cx="21" cy="43" r="5"/><circle cx="43" cy="43" r="5"/></g></svg></button><button class="ib" id="homeBtn" aria-label="Volver al inicio"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#3A2E26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg></button><button class="ib fsBtn" aria-label="Pantalla completa"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3A2E26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button><button class="ib sndBtn" aria-label="Sonido"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3A2E26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/></svg></button></div>
 </div>
 <section class="screen on" id="s-inicio"></section>
 <section class="screen" id="s-intro"></section>
@@ -170,6 +170,13 @@ const ICON={
  wave:`<g ${S} stroke="#2F4C7A"><path d="M6 24c6-6 10-6 13 0s7 6 13 0 10-6 13 0 7 6 13 0"/><path d="M6 36c6-6 10-6 13 0s7 6 13 0 10-6 13 0 7 6 13 0"/><path d="M6 48c6-6 10-6 13 0s7 6 13 0 10-6 13 0 7 6 13 0"/></g>`,
  city:`<g ${S}><path d="M6 56V30h12v26M18 56V18h14v38M32 56V26h12v30M44 56V36h14v20" fill="#E9DCC0"/><path d="M24 4v14M20 8h8"/></g>`,
  star:`<g ${S}><path d="M32 6l7 16 18 2-13 12 4 18-16-9-16 9 4-18L7 24l18-2z" fill="#F2C98A"/></g>`,
+ stand:`<g ${S}><circle cx="32" cy="10" r="6" fill="#E9C9A6"/><path d="M32 16v22M32 38l-8 20M32 38l8 20M32 22l-14-12M32 22l14-12"/></g>`,
+ sit:`<g ${S}><circle cx="26" cy="12" r="6" fill="#E9C9A6"/><path d="M26 18v18h16v20M26 26l12 4"/><path d="M14 36v22M14 36h12" stroke-width="2.5"/><path d="M46 36h6v22" stroke-width="2.5"/></g>`,
+ hand:`<g ${S}><path d="M22 58V30l-6-8c-2-3 2-6 4-3l6 7V10c0-4 6-4 6 0v16-20c0-4 6-4 6 0v20-16c0-4 6-4 6 0v20-12c0-4 6-4 6 0v24c0 10-6 16-16 16h-4" fill="#E9C9A6"/></g>`,
+ clap:`<g ${S}><path d="M18 50 8 30c-2-4 3-6 5-3l7 10-6-14c-2-4 3-6 5-2l8 16" fill="#E9C9A6"/><path d="M46 50l10-20c2-4-3-6-5-3l-7 10 6-14c2-4-3-6-5-2l-8 16" fill="#E9C9A6"/><path d="M30 8v6M22 12l3 5M42 12l-3 5" stroke="#F2B04C"/></g>`,
+ dice:`<g ${S}><rect x="10" y="10" width="44" height="44" rx="8" fill="#FDFBF5"/></g><g fill="#3A2E26"><circle cx="22" cy="22" r="4"/><circle cx="42" cy="22" r="4"/><circle cx="32" cy="32" r="4"/><circle cx="22" cy="42" r="4"/><circle cx="42" cy="42" r="4"/></g>`,
+ mask:`<g ${S}><path d="M10 14c14 6 30 6 44 0v14c0 16-10 26-22 26S10 44 10 28z" fill="#F2C98A"/><path d="M20 28c3-3 7-3 10 0M34 28c3-3 7-3 10 0M24 40c5 5 11 5 16 0"/></g>`,
+ chain2:`<g ${S}><rect x="4" y="22" width="26" height="20" rx="10" fill="none"/><rect x="34" y="22" width="26" height="20" rx="10" fill="none"/><path d="M22 32h20" stroke-width="4"/></g>`,
  lamp:`<g ${S}><path d="M14 40c0-6 10-10 22-10h14l6-6v10c0 8-10 14-24 14S14 46 14 40z" fill="#C9A86A"/><path d="M48 24c2-6-4-10-2-16 4 4 8 8 4 14" fill="#F2B04C"/></g>`
 };
 const icon=(k,w=80)=>`<svg viewBox="0 0 64 64" width="${w}" height="${w}" aria-hidden="true">${ICON[k]||""}</svg>`;
@@ -256,13 +263,17 @@ function renderInicio(){
  s.insertAdjacentHTML("beforeend",`<div style="position:absolute;right:0;top:0;display:flex;gap:8px;z-index:3"><a class="ib" href="../" aria-label="Todos los juegos" style="text-decoration:none"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3A2E26" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></a><button class="ib fsBtn" aria-label="Pantalla completa">${UI.fs}</button><button class="ib sndBtn" aria-label="Sonido">${UI.snd}</button></div>`);
  bindTools(s);
  $$("#teamPick .tm").forEach(b=>b.onclick=()=>{$$("#teamPick .tm").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");nTeams=+b.dataset.n;tone("tick");});
+ const kset=d=>{nKids=Math.max(3,Math.min(40,nKids+d));$("#kN").textContent=nKids;try{localStorage.setItem("es-kids",nKids);}catch(e){}tone("tick");};
+ if($("#kMinus")){$("#kMinus").onclick=()=>kset(-1);$("#kPlus").onclick=()=>kset(1);}
  $("#play").onclick=()=>{TEAMS=TEAMS_ALL.slice(0,nTeams);turnI=-1;G={i:0,r:0,got:0,stamps:[]};$("#turn").classList.remove("on");intro();};
 }
+let nKids=12;try{nKids=+localStorage.getItem("es-kids")||12;}catch(e){}
+function kidsCtl(){return `<div class="row" style="gap:10px;margin-top:10px"><span style="font-family:var(--type);font-size:20px">Niños en clase:</span><button class="tm" id="kMinus" aria-label="Menos niños" style="min-height:52px;font-size:26px">−</button><span id="kN" style="font-family:var(--type);font-size:30px;min-width:44px;text-align:center">${nKids}</span><button class="tm" id="kPlus" aria-label="Más niños" style="min-height:52px;font-size:26px">+</button></div>`;}
 const teamPickHTML=`<div><div style="font-family:var(--type);font-size:20px;margin-bottom:10px">¿Cómo jugáis?</div><div class="teams" id="teamPick">
  <button class="tm sel" data-n="0">Toda la clase</button>
  <button class="tm" data-n="2"><span class="dot" style="background:#C8892B"></span><span class="dot" style="background:#2F4C7A"></span>2</button>
  <button class="tm" data-n="3"><span class="dot" style="background:#C8892B"></span><span class="dot" style="background:#2F4C7A"></span><span class="dot" style="background:#5E7A4C"></span>3</button>
- <button class="tm" data-n="4"><span class="dot" style="background:#C8892B"></span><span class="dot" style="background:#2F4C7A"></span><span class="dot" style="background:#5E7A4C"></span><span class="dot" style="background:#9E2F28"></span>4</button></div></div>`;
+ <button class="tm" data-n="4"><span class="dot" style="background:#C8892B"></span><span class="dot" style="background:#2F4C7A"></span><span class="dot" style="background:#5E7A4C"></span><span class="dot" style="background:#9E2F28"></span>4</button></div>${kidsCtl()}</div>`;
 let introStep=0;
 function intro(){introStep=0;const s=$("#s-intro");
  s.innerHTML=GAME.intro.map((p,i)=>`<div class="panel ${i?"hidden":""}" id="ip${i}" style="left:${i*400}px;top:${[20,50,10][i]}px;transform:rotate(${[-3,2,-2][i]}deg)"><div class="art">${p.art}</div><div class="cap">${esc(p.cap)}</div></div>`).join("")+
@@ -416,6 +427,84 @@ const RET={
   $$("#rb .opt").forEach(b=>b.onclick=()=>pick(b.dataset.k));}
 };
 
+Object.assign(RET,{
+ body(r,ok){let qi=0;
+  const draw=()=>{const q=r.items[qi];
+   $("#rb").innerHTML=`<div style="display:grid;grid-template-columns:220px 1fr 220px;gap:24px;align-items:center;height:100%;padding-bottom:20px">
+    <div id="bUp" style="text-align:center;border-radius:20px;padding:10px;transition:all .3s">${icon("stand",190)}<div style="font-family:var(--type);font-size:24px">DE PIE<br><b style="font-size:30px;color:#2F5E2A">VERDADERO</b></div></div>
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:center"><div style="font-family:var(--type);font-size:20px">${qi+1} / ${r.items.length}</div><div class="tfcard" style="font-size:44px;min-height:220px">${esc(q.t)}</div>
+     <div id="bCount" style="font-family:var(--type);font-size:80px;line-height:1;min-height:80px;color:var(--red)"></div><div id="why" class="hand" style="font-size:32px;text-align:center;min-height:40px"></div>
+     <button class="btn main big" id="bGo">¡3, 2, 1… decidid!</button></div>
+    <div id="bDown" style="text-align:center;border-radius:20px;padding:10px;transition:all .3s">${icon("sit",190)}<div style="font-family:var(--type);font-size:24px">SENTADOS<br><b style="font-size:30px;color:#9E2F28">FALSO</b></div></div></div>`;
+   let phase=0;$("#bGo").onclick=async()=>{if(phase===0){phase=1;$("#bGo").style.visibility="hidden";for(const n of ["3","2","1"]){$("#bCount").textContent=n;tone("tick");await wait(800);}$("#bCount").textContent="¡YA!";tone("stamp");await wait(900);$("#bCount").textContent="";$("#bGo").textContent="Ver la respuesta";$("#bGo").style.visibility="visible";phase=2;}
+    else if(phase===2){phase=3;const w=q.v?$("#bUp"):$("#bDown"),o=q.v?$("#bDown"):$("#bUp");w.style.background="#DCEBD3";w.style.transform="scale(1.1)";o.style.opacity=.3;tone("win");$("#why").textContent=q.why||"";$("#bGo").textContent=qi<r.items.length-1?"Siguiente":"¡Terminado!";}
+    else{qi++;qi<r.items.length?draw():ok();}};};
+  draw();},
+ mime(r,ok){let qi=0;
+  const draw=()=>{const c=r.cards[qi];
+   $("#rb").innerHTML=`<div style="display:flex;gap:40px;align-items:center;height:100%;padding-bottom:30px">
+    <div style="width:320px;height:320px;border-radius:50%;background:#FDFBF5;border:5px solid var(--ink);display:flex;align-items:center;justify-content:center;flex:none" id="mArt">${icon(c.i,240)}</div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:20px"><div style="font-family:var(--type);font-size:22px">${esc(r.who||"¡Toda la clase!")} · Escena ${qi+1} de ${r.cards.length}</div>
+     <div class="hand" style="font-size:54px;line-height:1.05">${esc(c.t)}</div>
+     <div id="mCount" style="font-family:var(--type);font-size:90px;line-height:1;min-height:90px;color:var(--red)"></div>
+     <div class="row"><button class="btn main big" id="mGo">${icon("mask",50)} ¡Acción!</button></div></div></div>`;
+   let ph=0;$("#mGo").onclick=async()=>{if(ph===0){ph=1;$("#mGo").style.visibility="hidden";for(let n=r.secs||5;n>0;n--){$("#mCount").textContent=n;tone("tick");await wait(1000);}
+     $("#mCount").textContent="¡CONGELADOS!";tone("stamp");const f=document.createElement("div");f.style.cssText="position:absolute;inset:0;background:#fff;z-index:30;animation:fade .5s reverse forwards";$("#paper").appendChild(f);setTimeout(()=>f.remove(),500);
+     await wait(1200);$("#mGo").innerHTML=(qi<r.cards.length-1?"Siguiente escena ":"¡Bravo! ")+ARROW;$("#mGo").style.visibility="visible";ph=2;}
+    else{qi++;qi<r.cards.length?draw():ok();}};};
+  draw();},
+ row(r,ok){const need=r.need||25,T=r.secs||20;let n=0,t0=null,tid=null,done=false;
+  $("#rb").innerHTML=`<div style="display:flex;flex-direction:column;gap:20px;height:100%">
+   <div class="row" style="justify-content:space-between"><div class="hand" style="font-size:40px">${esc(r.prompt)}</div><div style="font-family:var(--type);font-size:40px" id="rT">${T} s</div></div>
+   <div style="position:relative;height:200px;background:#CFE0E3;border:4px solid #5B4636;border-radius:12px;overflow:hidden">
+    <svg viewBox="0 0 1000 200" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:0"><path d="M0 150 Q50 135 100 150 T200 150 T300 150 T400 150 T500 150 T600 150 T700 150 T800 150 T900 150 T1000 150 V200 H0z" fill="#8FB8C8"/></svg>
+    <div style="position:absolute;right:20px;top:40px;text-align:center">${icon("city",110)}<div style="font-family:var(--type);font-size:22px">${esc(r.goal)}</div></div>
+    <div id="boat" style="position:absolute;left:10px;top:30px;transition:left .25s">${icon("ship",140)}</div></div>
+   <div style="height:26px;background:#E9DCC0;border:3px solid var(--ink);border-radius:14px;overflow:hidden"><div id="rBar" style="height:100%;width:0;background:#2F6F8F;transition:width .2s"></div></div>
+   <div class="row" style="justify-content:center;gap:30px"><button class="btn main big" id="rowB" style="min-width:420px;font-size:44px;min-height:110px">${icon("clap",70)} ¡REMA!</button><div class="hand" style="font-size:30px;max-width:360px">Cada palmada de la clase = un golpe de remo</div></div></div>`;
+  const reset=()=>{n=0;t0=null;clearInterval(tid);$("#rT").textContent=T+" s";$("#rBar").style.width="0";$("#boat").style.left="10px";};
+  $("#rowB").onclick=()=>{if(done)return;if(!t0){t0=Date.now();tid=setInterval(()=>{const left=Math.max(0,T-Math.floor((Date.now()-t0)/1000));$("#rT").textContent=left+" s";if(left<=0&&!done){clearInterval(tid);bad($("#rowB"),"¡El viento os frenó! Otra vez, más fuerte");setTimeout(reset,1500);}},250);}
+   n++;tone("tick");const f=Math.min(1,n/need);$("#rBar").style.width=(f*100)+"%";$("#boat").style.left=`calc(${f*78}% + 10px)`;
+   if(n>=need){done=true;clearInterval(tid);tone("win");confetti();setTimeout(ok,1200);}};},
+ chorus(r,ok){const words=r.text.split(" ");const hidden=new Set();
+  const paint=()=>{$("#chV").innerHTML=words.map((w,i)=>hidden.has(i)?`<span style="display:inline-block;min-width:${w.length*0.55}em;border-bottom:4px solid var(--ink);color:transparent">${esc(w)}</span>`:`<span>${esc(w)}</span>`).join(" ");};
+  $("#rb").innerHTML=`<div style="display:flex;flex-direction:column;gap:24px;align-items:center;padding-top:6px">
+   <div class="hand" style="font-size:34px">${esc(r.prompt||"¡Leedlo todos juntos en voz alta!")}</div>
+   <div id="chV" style="font-family:var(--hand);font-size:60px;line-height:1.25;text-align:center;background:#FDFBF5;border:4px double #9E7B4F;padding:24px 34px;border-radius:12px;max-width:1100px"></div>
+   <span class="ref">${UI.book} ${esc(r.vref)}</span>
+   <button class="btn main big" id="chB">Ocultar palabras ${ARROW}</button></div>`;paint();
+  $("#chB").onclick=()=>{const vis=words.map((_,i)=>i).filter(i=>!hidden.has(i));if(!vis.length){ok();return;}
+   shuffle(vis).slice(0,Math.max(2,Math.ceil(words.length/5))).forEach(i=>hidden.add(i));paint();tone("tick");
+   if(hidden.size===words.length){$("#chB").innerHTML=`¡De memoria! ${ARROW}`;tone("win");}};},
+ poll(r,ok){let qi=0;const res=[];
+  const draw=()=>{const q=r.qs[qi];let v=0;
+   $("#rb").innerHTML=`<div style="display:flex;gap:40px;align-items:center;height:100%;padding-bottom:20px">
+    <div style="flex:none">${icon(q.i||"hand",230)}</div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:18px"><div style="font-family:var(--type);font-size:22px">${qi+1} / ${r.qs.length} · ¡Levantad la mano!</div><div class="hand" style="font-size:50px;line-height:1.05">${esc(q.q)}</div>
+     <div class="row" style="gap:20px"><button class="tm" id="pM" aria-label="Menos" style="min-height:80px;min-width:80px;font-size:40px;justify-content:center">−</button><div id="pV" style="font-family:var(--type);font-size:90px;min-width:120px;text-align:center">0</div><button class="tm" id="pP" aria-label="Más" style="min-height:80px;min-width:80px;font-size:40px;justify-content:center">+</button><span style="font-family:var(--type);font-size:28px;color:var(--sepia)">de ${nKids}</span></div>
+     <div class="row"><button class="btn main" id="pOk">Anotar ${ARROW}</button></div></div></div>`;
+   const set=d=>{v=Math.max(0,Math.min(nKids,v+d));$("#pV").textContent=v;tone("tick");};
+   $("#pM").onclick=()=>set(-1);$("#pP").onclick=()=>set(1);
+   $("#pOk").onclick=()=>{res.push(v);qi++;if(qi<r.qs.length)draw();else chart();};};
+  const chart=()=>{tone("win");
+   $("#rb").innerHTML=`<div style="display:flex;flex-direction:column;gap:14px"><div class="hand" style="font-size:40px">${esc(r.chartTitle||"¡Así es nuestra clase!")}</div>
+    ${r.qs.map((q,i)=>{const pct=Math.round(res[i]/nKids*100);return `<div style="display:grid;grid-template-columns:420px 1fr 90px;gap:16px;align-items:center"><div style="font-size:24px;line-height:1.15">${esc(q.short||q.q)}</div><div style="height:46px;background:#E9DCC0;border:3px solid var(--ink);border-radius:8px;overflow:hidden"><div class="pbar" data-w="${pct}" style="height:100%;width:0;background:${["#2F4C7A","#C8892B","#5E7A4C","#9E2F28"][i%4]};transition:width 1.2s ease"></div></div><div style="font-family:var(--type);font-size:30px">${pct}%</div></div>`;}).join("")}
+    <div class="hand" style="font-size:32px;margin-top:8px">${esc(r.after||"")}</div><div class="row"><button class="btn main" id="pDone">¡Genial! ${ARROW}</button></div></div>`;
+   requestAnimationFrame(()=>requestAnimationFrame(()=>$$(".pbar").forEach(b=>b.style.width=b.dataset.w+"%")));$("#pDone").onclick=ok;};
+  draw();},
+ guess(r,ok){let v=r.start;
+  $("#rb").innerHTML=`<div style="display:flex;gap:40px;align-items:center;height:100%;padding-bottom:20px">
+   <div style="flex:none;position:relative">${icon(r.i||"lake",240)}<div id="gArrow" style="position:absolute;left:0;right:0;top:-10px;text-align:center;font-family:var(--type);font-size:40px"></div></div>
+   <div style="flex:1;display:flex;flex-direction:column;gap:18px"><div class="hand" style="font-size:46px;line-height:1.05">${esc(r.q)}</div>
+    <div class="row" style="gap:12px">${[-10,-1].map(d=>`<button class="tm gd" data-d="${d}" style="min-height:76px;min-width:90px;font-size:30px;justify-content:center">${d}</button>`).join("")}<div style="font-family:var(--type);font-size:84px;min-width:200px;text-align:center"><span id="gV">${v}</span><span style="font-size:36px"> ${esc(r.unit)}</span></div>${[1,10].map(d=>`<button class="tm gd" data-d="${d}" style="min-height:76px;min-width:90px;font-size:30px;justify-content:center">+${d}</button>`).join("")}</div>
+    <div id="gFb" class="hand" style="font-size:40px;min-height:48px"></div>
+    <div class="row"><button class="btn main" id="gOk">¿Es este? ${ARROW}</button>${timerBtn()}</div></div></div>`;
+  $$("#rb .gd").forEach(b=>b.onclick=()=>{v=Math.max(r.min||0,Math.min(r.max||9999,v+ +b.dataset.d));$("#gV").textContent=v;tone("tick");});
+  let tries=0;$("#gOk").onclick=()=>{tries++;const d=r.answer-v;
+   if(Math.abs(d)<=(r.tol||0)){$("#gFb").textContent=`¡Sí! ${r.answer} ${r.unit}. ${r.why||""}`;tone("win");confetti();$("#gOk").style.display="none";setTimeout(ok,2600);}
+   else{tone("bad");$("#gFb").textContent=(d>0?r.more:r.less)+(tries>=4?` (pista: entre ${r.answer-15} y ${r.answer+15})`:"");$("#gArrow").textContent=d>0?"▲":"▼";}};}
+});
+
 /* ---------- final ---------- */
 function finale(){show("s-final",false);const f=$("#s-final");f.innerHTML=GAME.final();
  f.insertAdjacentHTML("beforeend",`<div style="position:absolute;right:0;top:0;display:flex;gap:8px;z-index:3"><a class="ib" href="../" aria-label="Todos los juegos" style="text-decoration:none"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3A2E26" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></a><button class="ib fsBtn" aria-label="Pantalla completa">${UI.fs}</button><button class="ib sndBtn" aria-label="Sonido">${UI.snd}</button></div>`);
@@ -423,6 +512,14 @@ function finale(){show("s-final",false);const f=$("#s-final");f.innerHTML=GAME.f
  const a=$("#again");if(a)a.onclick=()=>{show("s-inicio",false);};}
 
 $("#homeBtn").onclick=()=>{overlay(`<div class="ovcard"><h2 style="font-size:40px">¿Volver al inicio?</h2><div class="row"><button class="btn" id="ovNo">No</button><button class="btn main" id="ovYes">Sí</button></div></div>`);$("#ovNo").onclick=closeOv;$("#ovYes").onclick=()=>{closeOv();show("s-inicio",false);};};
+
+/* ---------- ¿quién responde? ---------- */
+function picker(){const pool=TEAMS.length?TEAMS.map(t=>({t:t.n,c:t.c})):Array.from({length:nKids},(_,i)=>({t:"Nº "+(i+1),c:"#3A2E26"}));
+ overlay(`<div class="ovcard" style="min-width:560px"><div style="font-family:var(--type);font-size:30px">¿Quién responde?</div><div id="pk" style="font-family:var(--type);font-size:110px;line-height:1.1;min-height:130px"></div><div class="hand" id="pkSub" style="font-size:34px;min-height:40px"></div><button class="btn main" id="ovOk" style="visibility:hidden">¡Vamos!</button></div>`);
+ let n=0,last=-1;const total=18+Math.floor(Math.random()*6);
+ const step=()=>{let k;do{k=Math.floor(Math.random()*pool.length);}while(pool.length>1&&k===last);last=k;const el=$("#pk");if(!el)return;el.textContent=pool[k].t;el.style.color=pool[k].c;tone("tick");n++;
+  if(n<total)setTimeout(step,40+n*n*0.9);else{tone("win");$("#pkSub").textContent=TEAMS.length?"¡Le toca a este equipo!":"¡Que conteste este número de lista!";$("#ovOk").style.visibility="visible";$("#ovOk").onclick=closeOv;}};step();}
+$("#diceBtn").onclick=picker;
 
 /* ---------- keyboard ---------- */
 document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;const k=e.key.toLowerCase();const vis=el=>el&&el.offsetParent!==null&&!el.disabled;
@@ -441,7 +538,8 @@ function classroom(n,w=520){
   <g opacity="${on(2)}"><rect x="130" y="76" width="90" height="70" fill="#E9DCC0" stroke="#3A2E26" stroke-width="2"/>${[0,1,2,3].map(r=>`<path d="M130 ${90+r*14}h90" stroke="#C9B48E" stroke-width="1.5"/>`).join("")}</g>
   <g opacity="${on(3)}"><path d="M28 78 130 26l102 52z" fill="#C2674A" stroke="#3A2E26" stroke-width="2.5"/></g>
   <g opacity="${on(4)}"><rect x="118" y="108" width="24" height="38" fill="#8E5A3A" stroke="#3A2E26" stroke-width="2"/><rect x="58" y="96" width="34" height="24" fill="#BFD7EA" stroke="#3A2E26" stroke-width="2"/><rect x="168" y="96" width="34" height="24" fill="#BFD7EA" stroke="#3A2E26" stroke-width="2"/><path d="M75 96v24M185 96v24" stroke="#3A2E26" stroke-width="1.5"/></g>
-  <g opacity="${on(5)}"><rect x="96" y="54" width="68" height="18" rx="3" fill="#FDFBF5" stroke="#3A2E26" stroke-width="2"/><text x="130" y="68" text-anchor="middle" font-family="Special Elite, monospace" font-size="13" fill="#3A2E26">KOMPAS</text><path d="M130 26V6" stroke="#3A2E26" stroke-width="2"/><rect x="130" y="6" width="22" height="7" fill="#fff" stroke="#3A2E26" stroke-width="1"/><rect x="130" y="13" width="22" height="7" fill="#DC143C" stroke="#3A2E26" stroke-width="1"/></g>
+  <g opacity="${on(5)}"><path d="M14 160c0-20 4-40 6-40s6 20 6 40" fill="#7A9A5A" stroke="#3A2E26" stroke-width="2"/><circle cx="20" cy="112" r="16" fill="#8FB86A" stroke="#3A2E26" stroke-width="2"/><circle cx="240" cy="118" r="12" fill="#8FB86A" stroke="#3A2E26" stroke-width="2"/><path d="M240 130v30" stroke="#3A2E26" stroke-width="3"/><path d="M118 160c-6-4-20-6-40-6M142 160c6-4 20-6 40-6" stroke="#B5A27E" stroke-width="3" fill="none"/></g>
+  <g opacity="${on(6)}"><rect x="96" y="54" width="68" height="18" rx="3" fill="#FDFBF5" stroke="#3A2E26" stroke-width="2"/><text x="130" y="68" text-anchor="middle" font-family="Special Elite, monospace" font-size="13" fill="#3A2E26">KOMPAS</text><path d="M130 26V6" stroke="#3A2E26" stroke-width="2"/><rect x="130" y="6" width="22" height="7" fill="#fff" stroke="#3A2E26" stroke-width="1"/><rect x="130" y="13" width="22" height="7" fill="#DC143C" stroke="#3A2E26" stroke-width="1"/></g>
  </svg>`;}
 const PL=DATA.pl;
 const GAME={
@@ -465,7 +563,7 @@ const GAME={
   {art:icon("family",220),cap:"Filip estaba triste: sus padres ya no vivían juntos."},
   {art:icon("pray",220),cap:"Pero sabía qué hacer: orar… ¡durante cinco años!"},
   {art:icon("school",220),cap:"Hoy estudia en Kompas, una escuela que se ha quedado pequeña."}],
- collect:{icon:"brick",won:n=>n<6?`¡Parte ${n} de 6 de la escuela!`:"¡Escuela terminada!",art:n=>classroom(n,460)},
+ collect:{icon:"brick",won:n=>n<7?`¡Parte ${n} de 7 de la escuela!`:"¡Escuela terminada!",art:n=>classroom(n,460)},
  steps:[
   {short:"Mapa",place:"Polonia",
    arrive:{art:`<div style="display:flex;flex-direction:column;gap:0;width:260px;border:4px solid #3A2E26"><div style="height:80px;background:#fff"></div><div style="height:80px;background:#DC143C"></div></div>`,sub:"Polska",face:"F",color:"#D9A58C",who:"Filip, 8.º grado",say:"¡Hola! Vivo en Polonia. ¿Sabéis dónde está?"},
@@ -479,11 +577,11 @@ const GAME={
      hint:"Mira la brújula: suroeste es entre el sur (abajo) y el oeste (izquierda).",miss:"Suroeste: abajo y a la izquierda"}],
    lesson:"Filip tarda 40 minutos en llegar… ¡y otros 40 en volver!"},
   {short:"Polonia",place:"Polonia",
-   retos:[{type:"quiz",title:"Polonia en 4 preguntas",hint:"Polska viene de una palabra que habla de un paisaje llano.",qs:[
+   retos:[{type:"quiz",title:"Polonia en 3 preguntas",hint:"Polska viene de una palabra que habla de un paisaje llano.",qs:[
      {q:"En polaco, Polonia es «Polska». ¿Qué significa?",i:"mountains",o:["Campo o tierra plana","Montaña alta","Río grande","Tierra fría"],a:0},
      {q:"¿Qué mar baña el norte de Polonia?",i:"wave",o:["El Báltico","El Mediterráneo","El mar Negro","El mar del Norte"],a:0},
-     {q:"¿Cómo se llama su moneda?",i:"coin",o:["Zloty","Euro","Corona","Forinto"],a:0},
-     {q:"El lago más profundo, el Hańcza, mide unos 108 m. ¿Como un edificio de cuántos pisos?",i:"lake",o:["30","3","10","100"],a:0,why:"¡Casi 30 pisos de agua!"}]}],
+     {q:"¿Cómo se llama su moneda?",i:"coin",o:["Zloty","Euro","Corona","Forinto"],a:0}]},
+    {type:"guess",title:"¿Cuánto mide de hondo?",q:"Polonia tiene unos 10.000 lagos. ¿Cuántos metros de profundidad tiene el más hondo, el Hańcza? ¡Gritad un número!",i:"lake",unit:"m",start:50,min:0,max:500,answer:108,tol:3,more:"¡Más profundo! ▲",less:"¡Menos! ▼",why:"¡Casi como un edificio de 30 pisos!",hint:"Es más de 100 metros, pero menos de 120."}],
    lesson:"En Polonia hay unos 6.000 adventistas en 117 iglesias."},
   {short:"Filip",place:"La historia de Filip",
    arrive:{art:icon("pray",220),sub:"Oró un año",face:"F",color:"#D9A58C",who:"Filip",say:"Mi mamá quería que fuera a Kompas, pero papá no estaba convencido. Así que…"},
@@ -491,7 +589,7 @@ const GAME={
      items:[{i:"city",t:"Va a una escuela pública cerca de casa"},{i:"pray",t:"Ora durante un año"},{i:"heart",t:"Su papá acepta"},{i:"school",t:"Entra en Kompas en 6.º grado"}]}],
    lesson:"Filip ya ha aprendido algo: la oración es importante."},
   {short:"¿V o F?",place:"¿Verdadero o falso?",
-   retos:[{type:"tf",title:"¿Verdadero o falso?",hint:"Recuerda la historia: fiebre, fútbol, biblias en círculo…",items:[
+   retos:[{type:"body",title:"¡De pie o sentados!",hint:"Si es verdadero, todos de pie. Si es falso, todos sentados. ¡Al terminar la cuenta!",items:[
      {t:"Filip oró durante cinco años por sus padres.",v:true,why:"¡Cierto! Y hoy sus padres están juntos de nuevo."},
      {t:"Su asignatura favorita es matemáticas.",v:false,why:"Falso: le encanta educación física, ¡fútbol y voleibol!"},
      {t:"En Kompas estudian la Biblia cada mañana sentados en círculo.",v:true,why:"¡Cierto! Cada mañana, en círculo."},
@@ -499,6 +597,12 @@ const GAME={
      {t:"Dios siempre responde justo como nosotros queremos.",v:false,why:"Falso: no siempre, pero siempre sabe qué es lo mejor."},
      {t:"Su papá trabaja en la computadora mientras espera a Filip.",v:true,why:"¡Cierto! Un esfuerzo diario por su hijo."}]}],
    lesson:"Dios escucha, aunque a veces responda de otra manera."},
+  {short:"Clase",place:"Nuestra clase",
+   retos:[{type:"poll",title:"Nuestra clase en datos",chartTitle:"¡Así es nuestra clase!",after:"Filip oró cada día durante años. ¡Vosotros también podéis hablar con Dios cada día!",hint:"Contad las manos levantadas y ajustad el número con + y −.",qs:[
+     {q:"¿Quién ha orado alguna vez por algo durante mucho tiempo?",short:"Han orado mucho tiempo por algo",i:"pray"},
+     {q:"¿A quién le gusta más educación física que matemáticas?",short:"Prefieren educación física",i:"ball"},
+     {q:"¿Quién lee la Biblia en casa casi todos los días?",short:"Leen la Biblia casi cada día",i:"book"}]}],
+   lesson:"Cada niño de esta clase es importante para Dios."},
   {short:"Cálculo",place:"Matemáticas de la oración",
    retos:[{type:"quiz",title:"Matemáticas de la oración",hint:"5 años × 365 días. Y el papá lleva y trae a Filip, pero espera en la escuela.",qs:[
      {q:"Filip oró 5 años. ¿Cuántos días son, más o menos?",i:"calendar",o:["1.825","500","365","5.000"],a:0,why:"5 × 365 = 1.825 días orando."},
@@ -506,20 +610,24 @@ const GAME={
      {q:"Viven a 35 km. Papá lo lleva, espera allí trabajando y lo trae. ¿Cuántos km conduce al día?",i:"car",o:["70 km","35 km","140 km","105 km"],a:0,why:"Ida y vuelta una sola vez: 35 + 35 = 70 km."}]}],
    lesson:"Para Filip, todo ese esfuerzo vale la pena."}
  ],
- final:()=>`<div style="position:absolute;left:0;top:0;width:560px;bottom:0;display:flex;flex-direction:column;gap:12px;align-items:center">
-   <span class="label">¡ESCUELA AMPLIADA!</span>${classroom(6,520)}
-   <div style="background:var(--blue);color:#F5F0E4;padding:16px 22px;border-radius:6px;align-self:stretch;text-align:center"><div class="hand" style="font-size:52px;line-height:1">«Orad sin cesar»</div><div style="font-family:var(--type);font-size:18px;color:var(--gold);margin-top:4px">1 TESALONICENSES 5:17 · RVR1960</div></div>
-   <div class="hand" style="font-size:30px;text-align:center;line-height:1.1">Tu ofrenda ayuda a que más niños estudien la Biblia cada mañana, como Filip.</div>
+ final:()=>`<div style="position:absolute;left:0;top:0;width:520px;bottom:0;display:flex;flex-direction:column;gap:12px;align-items:center">
+   <span class="label">¡ESCUELA AMPLIADA!</span>${classroom(7,480)}
+   <div style="background:var(--blue);color:#F5F0E4;padding:14px 22px;border-radius:6px;align-self:stretch;text-align:center"><div class="hand" style="font-size:50px;line-height:1">«Orad sin cesar»</div><div style="font-family:var(--type);font-size:18px;color:var(--gold);margin-top:4px">1 TESALONICENSES 5:17 · RVR1960</div></div>
+   <div class="hand" style="font-size:28px;text-align:center;line-height:1.1">Tu ofrenda ayuda a que más niños estudien la Biblia cada mañana, como Filip.</div>
   </div>
-  <div style="position:absolute;left:600px;right:0;top:60px;bottom:0;display:flex;flex-direction:column;gap:14px">
-   <h2 style="font-size:34px">Mi tarjeta de oración</h2>
-   <div class="hand" style="font-size:32px">Elige por qué vas a orar esta semana:</div>
-   <div class="opts" id="prayOpts">${[["family","Por mi familia"],["heart","Por un amigo"],["school","Por mi escuela"],["church","Por los niños de Kompas"]].map(([i,t])=>`<button class="opt" data-t="${t}" style="min-height:100px">${icon(i,60)}${t}</button>`).join("")}</div>
-   <div id="prayCard" style="display:none;background:#FDFBF5;border:4px double #9E7B4F;padding:18px 22px;box-shadow:0 8px 18px rgba(0,0,0,.2);text-align:center"></div>
+  <div style="position:absolute;left:560px;right:0;top:56px;bottom:0;display:flex;flex-direction:column;gap:12px">
+   <h2 style="font-size:34px">Cadena de oración</h2>
+   <div class="hand" style="font-size:30px;line-height:1.05" id="chainMsg"></div>
+   <div class="opts" id="prayOpts">${[["family","Por las familias"],["heart","Por los amigos"],["school","Por nuestra escuela"],["church","Por los niños de Kompas"],["thermo","Por los enfermos"],["pray","Para orar sin rendirnos"]].map(([i,t])=>`<button class="opt" data-t="${t}" data-i="${i}" style="min-height:78px;font-size:22px">${icon(i,48)}${t}</button>`).join("")}</div>
+   <div id="chain" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-height:70px"></div>
    <div class="row" style="margin-top:auto"><button class="btn main" id="again">Otra vez</button></div>
   </div>`,
- afterFinal:()=>{$$("#prayOpts .opt").forEach(b=>b.onclick=()=>{$$("#prayOpts .opt").forEach(x=>x.classList.remove("ok"));b.classList.add("ok");tone("ok");
-  const c=$("#prayCard");c.style.display="block";c.innerHTML=`<div style="font-family:var(--type);font-size:18px;letter-spacing:2px;color:#8E3B2B">ESTA SEMANA ORARÉ…</div><div class="hand" style="font-size:46px;color:var(--blue)">${esc(b.dataset.t)}</div><div class="hand" style="font-size:28px">Como Filip: ¡sin rendirme!</div>`;});}
+ afterFinal:()=>{const need=Math.max(3,TEAMS.length);let k=0;
+  const who=()=>TEAMS.length?TEAMS[k%TEAMS.length]:{n:"La clase",c:["#2F4C7A","#C8892B","#5E7A4C"][k%3]};
+  const msg=()=>{$("#chainMsg").innerHTML=k<need?`<b style="color:${who().c}">${esc(who().n)}</b>: elegid un motivo y decid juntos una frase de oración.`:"¡Cadena completa! Dios escucha cada oración.";};msg();
+  $$("#prayOpts .opt").forEach(b=>b.onclick=()=>{if(k>=need||b.disabled)return;const w=who();b.disabled=true;b.style.background=w.c;b.style.color="#fff";tone("ok");
+   $("#chain").insertAdjacentHTML("beforeend",`${k?`<svg width="34" height="20" viewBox="0 0 34 20" aria-hidden="true"><rect x="2" y="4" width="30" height="12" rx="6" fill="none" stroke="#3A2E26" stroke-width="3"/></svg>`:""}<div style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:30px;border:3px solid #3A2E26;background:${w.c};color:#fff;font-family:var(--type);font-size:18px">${icon(b.dataset.i,32)}${esc(w.n)}</div>`);
+   k++;msg();if(k>=need){tone("win");confetti();}});}
 };
 
 </script>

@@ -1,5 +1,5 @@
 // Guarda todos los juegos para que funcionen aunque falle el wifi del aula.
-const CACHE = "detectives-v4";
+const CACHE = "escuela-v5";
 const FILES = ["./", "./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png",
   "./croacia/", "./croacia/index.html", "./leccion-6/", "./leccion-6/index.html", "./mision-kompas/", "./mision-kompas/index.html"]
   .concat(Array.from({length: 15}, (_, i) => `./croacia/slides/s${String(i + 1).padStart(2, "0")}.jpg`));
