@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* ===== Misión · Polonia · «Una mejor amiga» · CASO Nº 20 ===== */
+/* ===== Misión · Polonia · «Una mejor amiga» · CASO Nº 19 ===== */
 Object.assign(ICON,{
  plane:`<g ${S}><path d="M6 38l48-18c5-2 7 4 3 6L12 46z" fill="#FDFBF5"/><path d="M26 31l-8-14h7l15 9M30 41l3 13h-7l-9-10"/><path d="M8 38l-2-10h5l5 7"/></g>`,
  puzzle:`<g ${S}><path d="M8 12h16a6 6 0 1 1 12 0h18v18a6 6 0 1 0 0 12v12H36a6 6 0 1 0-12 0H8V42a6 6 0 1 1 0-12z" fill="#F2C98A"/></g>`,
@@ -875,10 +875,10 @@ Object.assign(RET,{
 /* ---------- el juego ---------- */
 const PZSHORT=["Lejos","Amigas","Bebé","Café","Prisca","Ciencia"];
 const GAME={
- caseNo:20,caseTitle:"Una mejor amiga",
+ caseNo:19,caseTitle:"Una mejor amiga",
  cover:()=>`
   <div style="position:absolute;left:0;top:14px;width:620px;display:flex;flex-direction:column;gap:14px">
-   <span class="label" style="align-self:flex-start">CASO Nº 20 · MISIÓN · POLONIA</span>
+   <span class="label" style="align-self:flex-start">CASO Nº 19 · MISIÓN · POLONIA</span>
    <h1 style="font-size:66px;line-height:1.02">Una mejor amiga</h1>
    <div class="hand" style="font-size:40px;line-height:1;color:#8E3B2B">El misterio: ¿qué le pidió Polianna a Dios… y qué pasó después?</div>
    <div style="margin-top:4px">${teamPickHTML}</div>
@@ -888,7 +888,7 @@ const GAME={
    <div class="pzdesk" style="left:10px;top:70px;width:520px;height:420px;transform:rotateX(26deg) rotateZ(4deg)">
     <div style="position:absolute;inset:0;background:#B98A5A;border:10px solid #7A5634;border-radius:8px;box-shadow:0 30px 40px rgba(0,0,0,.45)"></div>
     ${[[0,40,40,-8,20],[1,250,30,6,40],[2,140,170,-4,60],[3,330,190,10,30],[4,20,250,5,50],[5,250,300,-12,70]].map(([p,x,y,rz,z])=>`<div class="pzdesk" style="left:${x}px;top:${y}px;width:170px;height:113px;transform:translateZ(${z}px) rotate(${rz}deg);box-shadow:0 12px 16px rgba(0,0,0,.35);border:4px solid #FDFBF5">${pzPic(1,"100%","100%",`${(p%3)*200} ${Math.floor(p/3)*200} 200 133`)}</div>`).join("")}
-    <div class="pzdesk" style="right:-14px;top:-30px;transform:translateZ(80px) rotate(12deg);border:6px double #B5352A;color:#B5352A;font-family:var(--type);font-size:28px;padding:6px 16px;border-radius:10px;background:rgba(253,251,245,.75)">CASO Nº 20</div>
+    <div class="pzdesk" style="right:-14px;top:-30px;transform:translateZ(80px) rotate(12deg);border:6px double #B5352A;color:#B5352A;font-family:var(--type);font-size:28px;padding:6px 16px;border-radius:10px;background:rgba(253,251,245,.75)">CASO Nº 19</div>
    </div>
    <div class="pzdesk pzfloat" style="left:330px;top:360px">${icon("lupa",200)}</div>
    <div class="pzdesk" style="left:-20px;top:430px;transform:rotate(-6deg);background:#FDFBF5;padding:10px 18px;box-shadow:0 8px 14px rgba(0,0,0,.3);font-family:var(--hand);font-size:30px">¡Recompón las fotos!</div>
@@ -966,7 +966,7 @@ const GAME={
    lesson:"Los científicos nos ayudan a entender el maravilloso universo que Dios creó."}
  ],
  final:()=>`<div style="position:absolute;left:0;top:0;width:560px;bottom:0;display:flex;flex-direction:column;gap:10px">
-   <span class="label" style="align-self:flex-start">PRUEBAS DEL CASO Nº 20</span>
+   <span class="label" style="align-self:flex-start">PRUEBAS DEL CASO Nº 19</span>
    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;perspective:900px">${PZSHORT.map((t,i)=>`<div style="background:#FDFBF5;padding:6px 6px 2px;box-shadow:0 8px 14px rgba(0,0,0,.28);transform:rotateX(14deg) rotate(${[-3,2,-2,3,-1,2][i]}deg)">${pzPic(i,"100%",108)}<div class="hand" style="font-size:22px;text-align:center">${t}</div></div>`).join("")}</div>
    <div style="background:var(--blue);color:#F5F0E4;padding:12px 20px;border-radius:6px;text-align:center;margin-top:auto"><div class="hand" style="font-size:38px;line-height:1.05">«En todo tiempo ama el amigo, y es como un hermano en tiempo de angustia.»</div><div style="font-family:var(--type);font-size:17px;color:var(--gold);margin-top:4px">PROVERBIOS 17:17 · RVR1960</div></div>
   </div>

@@ -1,6 +1,6 @@
 {
- "name": "El último viaje de Pablo · Lección 6",
- "short_name": "Pablo",
+ "name": "La bitácora del Egeo · Lección 6",
+ "short_name": "Egeo",
  "lang": "es",
  "start_url": "./",
  "scope": "./",
@@ -10,8 +10,8 @@
   "standalone"
  ],
  "orientation": "landscape",
- "background_color": "#2E2018",
- "theme_color": "#2E2018",
+ "background_color": "#0C2A3F",
+ "theme_color": "#0C2A3F",
  "icons": [
   {
    "src": "icon-192.png",

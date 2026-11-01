@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* Misión · Polonia · 12 de diciembre · «La "Biblia grande"» · CASO Nº 22 · mecánica estrella: estantería bíblica 3D + carrera de búsqueda */
+/* Misión · Polonia · 12 de diciembre · «La "Biblia grande"» · CASO Nº 21 · mecánica estrella: estantería bíblica 3D + carrera de búsqueda */
 (()=>{const st=document.createElement("style");st.textContent=`
 .m13-wrap{perspective:1000px;perspective-origin:50% -40%}
 .m13-case{position:relative;margin:0 auto;height:310px;background:linear-gradient(#5A3C26,#6E4A2E);border:8px solid #3E2A1A;border-radius:10px 10px 4px 4px;transform:rotateX(7deg);transform-style:preserve-3d;box-shadow:inset 0 0 40px rgba(0,0,0,.45),0 24px 30px rgba(0,0,0,.3)}
@@ -715,10 +715,10 @@ const clue=(n,i,t)=>`<div class="m13-clue"><div class="t">PISTA Nº ${n}</div>${
 function coverShelf(){const B=["Génesis","Salmos","Isaías","Mateo","Juan","Hechos"];return `<div style="perspective:900px;perspective-origin:30% -30%"><div class="m13-case" style="width:520px;height:300px;transform:rotateY(-16deg) rotateX(6deg)"><div class="m13-in">${B.map((b,i)=>`<div class="m13-bk" style="left:${8+i*80}px;height:${bkH(i)}px;width:70px;--c:${bkCol(b,i)};${i===4?"transform:rotateZ(-9deg) translateX(-6px);transform-origin:0 100%":""}"><div class="tp"></div><div class="sd"></div><div class="sp"><span style="font-size:21px">${b}</span></div></div>`).join("")}</div></div></div>`;}
 
 const GAME={
- caseNo:22,caseTitle:"La «Biblia grande»",
+ caseNo:21,caseTitle:"La «Biblia grande»",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:610px;display:flex;flex-direction:column;gap:14px">
-   <div class="row" style="gap:10px;flex-wrap:nowrap"><span class="casebadge" style="font-size:20px">CASO Nº 22</span><span class="label" style="font-size:17px">MISIÓN · POLONIA · 12 DIC</span></div>
+   <div class="row" style="gap:10px;flex-wrap:nowrap"><span class="casebadge" style="font-size:20px">CASO Nº 21</span><span class="label" style="font-size:17px">MISIÓN · POLONIA · 12 DIC</span></div>
    <h1 style="font-size:60px;line-height:1.02">La «Biblia grande»</h1>
    <div class="hand" style="font-size:34px;line-height:1.02;color:#8E3B2B">Misterio: ¿por qué un niño de cinco años pedía cada mañana la Biblia de los mayores?</div>
    <div style="margin-top:2px">${teamPickHTML}</div>

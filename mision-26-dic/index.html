@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* Misión · 13.er sábado (26 dic): Tocar música para Jesús — CASO Nº 26: La partitura perdida
+/* Misión · 13.er sábado (26 dic): Tocar música para Jesús — CASO Nº 25: La partitura perdida
    Mecánica estrella: «El concierto» (pads de colores al compás, notas que bajan por un tablero 3D, Web Audio)
    + termómetro de la ofrenda que se llena con la participación de la clase. */
 Object.assign(ICON,{
@@ -762,10 +762,10 @@ Object.assign(RET,{
 });
 
 /* ---------- juego ---------- */
-const GAME={caseNo:26,caseTitle:"La partitura perdida",
+const GAME={caseNo:25,caseTitle:"La partitura perdida",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:620px;display:flex;flex-direction:column;gap:14px">
-   <div class="row" style="gap:10px"><span class="label">CASO Nº 26 · MISIÓN</span><span class="label" style="background:#E3C792;transform:rotate(2deg)">13.er SÁBADO · 26 DIC</span></div>
+   <div class="row" style="gap:10px"><span class="label">CASO Nº 25 · MISIÓN</span><span class="label" style="background:#E3C792;transform:rotate(2deg)">13.er SÁBADO · 26 DIC</span></div>
    <h1 style="font-size:62px;line-height:1.02">Tocar música para Jesús</h1>
    <div class="hand" style="font-size:40px;line-height:1;color:#6A4C93">La partitura perdida · El gran concierto</div>
    <div style="margin-top:4px">${teamPickHTML}</div>

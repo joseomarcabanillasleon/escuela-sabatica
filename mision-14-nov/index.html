@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* ===== Misión · Polonia · 14 nov · CASO Nº 14: Las monedas que se multiplicaron ===== */
+/* ===== Misión · Polonia · 14 nov · CASO Nº 13: Las monedas que se multiplicaron ===== */
 document.head.insertAdjacentHTML("beforeend",`<style>
 .hud{gap:8px}.hud .turn{font-size:19px;padding:8px 14px}.hud .stops{gap:4px}.hud .st{min-width:46px;padding:0 5px;font-size:14px}
 .m5card{background:#FDFBF5;border:3px solid var(--ink);border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,.18)}
@@ -722,10 +722,10 @@ function mVenta(r,ok){let pi=0,cash=0;const tot=[];
  draw();}
 
 const GAME={
- caseNo:14,caseTitle:"Las monedas que se multiplicaron",
+ caseNo:13,caseTitle:"Las monedas que se multiplicaron",
  cover:()=>`
   <div style="position:absolute;left:0;top:6px;width:620px;display:flex;flex-direction:column;gap:12px">
-   <div class="row" style="gap:12px"><span class="casebadge">CASO Nº 14</span><span class="label">MISIÓN · POLONIA · 14 NOV</span></div>
+   <div class="row" style="gap:12px"><span class="casebadge">CASO Nº 13</span><span class="label">MISIÓN · POLONIA · 14 NOV</span></div>
    <h1 style="font-size:54px;line-height:1">Cómo multiplicar el dinero</h1>
    <div class="hand" style="font-size:40px;line-height:1;color:#C8742A">Las monedas que se multiplicaron</div>
    <div class="m5card" style="padding:10px 16px;display:flex;gap:12px;align-items:center;transform:rotate(-1deg)"><div style="flex:none">${icon("lupa",58)}</div><div class="hand" style="font-size:28px;line-height:1.02">Unas pocas monedas se convirtieron en casi diez veces más… y ayudaron a niños de Tanzania. ¿Cómo?</div></div>
@@ -734,7 +734,7 @@ const GAME={
   </div>
   <div class="cv5" style="left:650px;top:30px;width:560px;height:600px"><div class="cv5in">
    <div style="position:absolute;left:30px;top:40px;width:490px;height:520px;background:linear-gradient(#E3C792,#D9B46A);border:3px solid #9E7B4F;border-radius:8px;box-shadow:0 30px 40px rgba(0,0,0,.4);transform:translateZ(-40px)"></div>
-   <div style="position:absolute;left:46px;top:4px;width:170px;height:42px;background:#D9B46A;border:3px solid #9E7B4F;border-bottom:0;border-radius:10px 10px 0 0;font-family:var(--type);font-size:18px;display:flex;align-items:center;justify-content:center;transform:translateZ(-40px)">CASO Nº 14</div>
+   <div style="position:absolute;left:46px;top:4px;width:170px;height:42px;background:#D9B46A;border:3px solid #9E7B4F;border-bottom:0;border-radius:10px 10px 0 0;font-family:var(--type);font-size:18px;display:flex;align-items:center;justify-content:center;transform:translateZ(-40px)">CASO Nº 13</div>
    <div style="position:absolute;left:70px;top:70px;padding:12px;background:#FDFBF5;box-shadow:0 12px 20px rgba(0,0,0,.3);transform:rotate(-3deg) translateZ(20px)">${icon("puesto",260)}<div class="hand" style="font-size:26px;text-align:center">El puesto de Kompas</div></div>
    ${[[110,0],[200,.9],[300,1.8],[380,.4]].map(([x,d])=>`<div class="fall" style="left:${x}px;top:120px;animation-delay:${d}s">${icon("coin",54)}</div>`).join("")}
    <div style="position:absolute;left:300px;top:330px;width:200px;height:200px;border-radius:50%;background:#FDFBF5;border:4px solid #3A2E26;display:flex;align-items:center;justify-content:center;transform:translateZ(70px);box-shadow:0 14px 20px rgba(0,0,0,.35)">${icon("tarro",150)}</div>
@@ -810,7 +810,7 @@ const GAME={
    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%" id="mGive">${[["reloj","Mi tiempo"],["sonrisa","Mi sonrisa"],["hand","Mi ayuda"],["coin","Mi ofrenda"],["pray","Mi oración"],["star","Mis talentos"]].map(([i,t])=>`<button class="opt" data-i="${i}" style="min-height:64px;font-size:19px;padding:6px 8px;gap:6px">${icon(i,40)}${t}</button>`).join("")}</div>
   </div>
   <div style="position:absolute;left:560px;right:0;top:56px;bottom:0;display:flex;flex-direction:column;gap:12px">
-   <div style="font-family:var(--type);letter-spacing:3px;color:#8E3B2B;font-size:18px">CASO Nº 14 · LA REVELACIÓN</div>
+   <div style="font-family:var(--type);letter-spacing:3px;color:#8E3B2B;font-size:18px">CASO Nº 13 · LA REVELACIÓN</div>
    <div class="rev5" id="rv1"><div class="f">${icon("lupa",50)} ¿Cómo se multiplicaron las monedas?</div><div class="b">Lo pusieron en las manos de Dios… ¡y Él lo multiplicó!</div></div>
    <div class="rev5" id="rv2"><div class="f">${icon("school",50)} ¿Y tu ofrenda de hoy?</div><div class="b">Ayuda a ampliar la escuela Kompas, ¡para que más niños aprendan a servir!</div></div>
    <div style="background:var(--blue);color:#F5F0E4;padding:12px 18px;border-radius:6px;text-align:center"><div class="hand" style="font-size:33px;line-height:1.02">«Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre.»</div><div style="font-family:var(--type);font-size:17px;color:var(--gold);margin-top:4px">2 CORINTIOS 9:7 · RVR1960</div></div>

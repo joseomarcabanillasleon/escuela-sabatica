@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* ===== Lección 5 · «Alboroto en Éfeso» · CASO Nº 9: la caja del platero ===== */
+/* ===== Lección 5 · «Alboroto en Éfeso» · CASO Nº 10: la caja del platero ===== */
 document.head.insertAdjacentHTML("beforeend",`<style>
 .hud .st{min-width:50px;font-size:14px}
 .l5card{background:#FDFBF5;border:3px solid var(--ink);border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,.18)}
@@ -830,10 +830,10 @@ $("#paper").addEventListener("scroll",e=>{const p=e.currentTarget;if(p.scrollLef
 
 /* ---------- el juego ---------- */
 const GAME={
- caseNo:9,caseTitle:"Alboroto en Éfeso",
+ caseNo:10,caseTitle:"Alboroto en Éfeso",
  cover:()=>`
   <div style="position:absolute;left:0;top:6px;width:620px;display:flex;flex-direction:column;gap:12px">
-   <div class="row" style="gap:12px"><span class="casebadge">CASO Nº 9</span><span class="label">LECCIÓN 5 · HECHOS 19</span></div>
+   <div class="row" style="gap:12px"><span class="casebadge">CASO Nº 10</span><span class="label">LECCIÓN 5 · HECHOS 19</span></div>
    <h1 style="font-size:66px;line-height:1">Alboroto en Éfeso</h1>
    <div class="hand" style="font-size:44px;line-height:1;color:#9C5A2A">La caja del platero</div>
    <div class="l5card" style="padding:10px 16px;display:flex;gap:12px;align-items:center;transform:rotate(-1deg)">${icon("lupa5",58)}<div class="hand" style="font-size:29px;line-height:1.02">Una ciudad entera grita en el teatro. ¿Por qué? ¿Y cómo volvió la calma? ¡Girad las pruebas y descubridlo!</div></div>
@@ -922,7 +922,7 @@ const GAME={
    <div class="hand" style="font-size:34px;text-align:center;line-height:1.05">La calma volvió… y Pablo zarpó hacia Macedonia.</div>
   </div>
   <div style="position:absolute;left:620px;right:0;top:56px;bottom:0;display:flex;flex-direction:column;gap:12px">
-   <div style="font-family:var(--type);letter-spacing:3px;color:#8E3B2B;font-size:18px">CASO Nº 9 · LO QUE DESCUBRIMOS</div>
+   <div style="font-family:var(--type);letter-spacing:3px;color:#8E3B2B;font-size:18px">CASO Nº 10 · LO QUE DESCUBRIMOS</div>
    ${[["martillo","Demetrio se enfadó porque ganaba menos dinero."],["tablilla","Dios cuidó a Pablo por medio de sus amigos."],["teatro","El magistrado calmó a todos y volvieron a casa."],["heart","Muchos dejaron atrás lo que les alejaba de Dios."]].map(([i,t])=>`<div class="l5card" style="display:flex;align-items:center;gap:12px;padding:6px 12px">${icon(i,48)}<div class="hand" style="font-size:29px;line-height:1">${esc(t)}</div></div>`).join("")}
    <div style="background:var(--blue);color:#F5F0E4;padding:12px 18px;border-radius:6px;text-align:center"><div class="hand" style="font-size:38px;line-height:1.02">«Al Señor tu Dios adorarás, y a él solo servirás.»</div><div style="font-family:var(--type);font-size:17px;color:var(--gold);margin-top:4px">MATEO 4:10 · RVR1960</div></div>
    <div class="row" style="margin-top:auto;justify-content:space-between"><div class="hand" style="font-size:28px" id="crew"></div><button class="btn main" id="again">Otra vez</button></div>

@@ -1,6 +1,6 @@
 {
- "name": "Misión Kompas · Cinco años orando",
- "short_name": "Kompas",
+ "name": "Cinco años orando · Misión Polonia",
+ "short_name": "Cinco años",
  "lang": "es",
  "start_url": "./",
  "scope": "./",
@@ -10,8 +10,8 @@
   "standalone"
  ],
  "orientation": "landscape",
- "background_color": "#2E2018",
- "theme_color": "#2E2018",
+ "background_color": "#141842",
+ "theme_color": "#141842",
  "icons": [
   {
    "src": "icon-192.png",

@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* ===== Lección 1 · Debate en Jerusalén · CASO Nº 1 · mecánica estrella: la balanza del concilio ===== */
+/* ===== Lección 1 · Debate en Jerusalén · CASO Nº 2 · mecánica estrella: la balanza del concilio ===== */
 Object.assign(ICON,{
  l1scale:`<g ${S}><path d="M32 12v40M20 56h24" stroke-width="4"/><path d="M10 18h44" stroke-width="4"/><circle cx="32" cy="12" r="4" fill="#E9C46A"/><path d="M10 18 4 36M10 18l6 18M54 18l-6 18M54 18l6 18" stroke-width="2"/><path d="M2 36h16c0 5-4 8-8 8s-8-3-8-8zM46 36h16c0 5-4 8-8 8s-8-3-8-8z" fill="#E9C46A"/></g>`,
  l1letter:`<g ${S}><path d="M14 10h34c4 0 6 3 6 6v32c0 4-2 6-6 6H16c-4 0-6-2-6-6V16" fill="#F7E9C8"/><path d="M10 16c0-4 2-6 4-6s4 2 4 6v4h-8z" fill="#E3C792"/><path d="M24 22h22M24 30h22M24 38h12"/><circle cx="42" cy="46" r="8" fill="#B5352A" stroke="#6E2A1A"/><path d="M38 46h8M42 42v8" stroke="#F2C98A" stroke-width="2"/></g>`,
@@ -751,10 +751,10 @@ const L1W=["ÁNIMO","RESPETO","IGUALES","GRACIA","OTRA VEZ","SERVIR"];
 function l1Pesas(n,big){return `<div class="row" style="gap:6px;justify-content:center;flex-wrap:nowrap">${L1W.map((w,i)=>`<div class="l1-pw" style="opacity:${i<n?1:.2}"><svg viewBox="0 0 64 64" width="${i===n-1&&big?96:66}" height="${i===n-1&&big?96:66}" aria-hidden="true">${ICON.l1pesa}</svg><div class="lb">${i<n?w:"?"}</div></div>`).join("")}</div>`;}
 
 /* ---------- el juego ---------- */
-const GAME={caseNo:1,caseTitle:"Debate en Jerusalén",
+const GAME={caseNo:2,caseTitle:"Debate en Jerusalén",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:640px;display:flex;flex-direction:column;gap:14px">
-   <div class="row" style="gap:10px"><span class="casebadge" style="font-size:20px">CASO Nº 1</span><span class="label">LECCIÓN 1 · HECHOS 14–16</span></div>
+   <div class="row" style="gap:10px"><span class="casebadge" style="font-size:20px">CASO Nº 2</span><span class="label">LECCIÓN 1 · HECHOS 14–16</span></div>
    <h1 style="font-size:66px;line-height:1.02">Debate en Jerusalén</h1>
    <div class="clue" style="padding:10px 16px">${icon("l1scale",64)}<div class="t" style="font-size:31px">Una gran pregunta en la iglesia: ¿cómo nos salva Dios? ¡Pesad los argumentos!</div></div>
    <div>${teamPickHTML}</div>

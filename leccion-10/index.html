@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* ===== Lección 10 · El día que esperamos · CASO Nº 19 ===== */
+/* ===== Lección 10 · El día que esperamos · CASO Nº 20 ===== */
 Object.assign(ICON,{
  cloud:`<g ${S}><path d="M14 46h36a10 10 0 0 0 1-20 14 14 0 0 0-27-5A11 11 0 0 0 14 46z" fill="#FDFBF5"/><path d="M22 52l-2 6M32 52v6M42 52l2 6" stroke="#F2B04C"/></g>`,
  sunrise:`<g ${S}><path d="M14 44a18 18 0 0 1 36 0z" fill="#F2C98A"/><path d="M6 44h52M32 8v10M14 16l6 7M50 16l-6 7M4 30h8M52 30h8M14 52h36" /></g>`,
@@ -756,10 +756,10 @@ Object.assign(RET,{
 const V10IC=["scroll","cloud","trumpet","joy","clock","sunrise"];
 const V10MSG="CUANDO VEAS QUE PASAN ESTAS COSAS, NO TE PREOCUPES: YO ESTOY CONTIGO.";
 const GAME={
- caseNo:19,caseTitle:"El día que esperamos",
+ caseNo:20,caseTitle:"El día que esperamos",
  cover:()=>`
   <div style="position:absolute;left:0;top:14px;width:640px;display:flex;flex-direction:column;gap:14px">
-   <span class="label" style="align-self:flex-start">CASO Nº 19 · LECCIÓN 10</span>
+   <span class="label" style="align-self:flex-start">CASO Nº 20 · LECCIÓN 10</span>
    <h1 style="font-size:62px;line-height:1.02">El día que esperamos</h1>
    <div class="hand" style="font-size:42px;line-height:1;color:#8E3B2B">El misterio: ¿cómo volverá Jesús de verdad?</div>
    <div style="margin-top:4px">${teamPickHTML}</div>
@@ -773,7 +773,7 @@ const GAME={
     <div class="v10desk" style="left:30px;top:30px;width:440px;padding:14px;background:#FDFBF5;transform:translateZ(18px) rotate(3deg);box-shadow:0 10px 18px rgba(0,0,0,.3)">${v10Dawn(2,412)}
      <div class="hand" style="font-size:30px;text-align:center;margin-top:6px">Vigilad el horizonte…</div></div>
     <div class="v10desk" style="left:-40px;top:300px;width:170px;height:200px;background:#FDFBF5;border:3px solid #3A2E26;border-radius:8px;transform:translateZ(50px) rotate(-10deg);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 14px 20px rgba(0,0,0,.35)"><div style="font-family:var(--type);font-size:18px">PISTA Nº 1</div><div style="font-family:var(--type);font-size:90px;color:#9E8458;line-height:1">?</div></div>
-    <div class="v10desk" style="right:-10px;top:-20px;transform:translateZ(40px) rotate(12deg);border:6px double #B5352A;color:#B5352A;font-family:var(--type);font-size:28px;padding:6px 16px;border-radius:10px;background:rgba(253,251,245,.6)">CASO Nº 19</div>
+    <div class="v10desk" style="right:-10px;top:-20px;transform:translateZ(40px) rotate(12deg);border:6px double #B5352A;color:#B5352A;font-family:var(--type);font-size:28px;padding:6px 16px;border-radius:10px;background:rgba(253,251,245,.6)">CASO Nº 20</div>
    </div>
    <div class="v10desk v10lupa" style="left:300px;top:340px">${icon("lupa",210)}</div>
   </div>`,
@@ -843,7 +843,7 @@ const GAME={
    lesson:"No será el fin del mundo: será el fin del pecado y el comienzo de una vida perfecta."}
  ],
  final:()=>`<div style="position:absolute;left:0;top:0;width:560px;bottom:0;display:flex;flex-direction:column;gap:10px">
-   <span class="label" style="align-self:flex-start">SOLUCIÓN DEL CASO Nº 19</span>
+   <span class="label" style="align-self:flex-start">SOLUCIÓN DEL CASO Nº 20</span>
    <div style="display:grid;grid-template-columns:1fr;gap:4px">${[["cloud","Vendrá en las nubes: ¡todo ojo le verá!"],["trumpet","Con trompeta y con todos sus ángeles"],["joy","Le recibiremos en el aire"],["clock","Nadie sabe el día: ¡estad preparados!"],["sunrise","Los muertos en Cristo resucitarán"]].map(([i,t])=>`<div class="row" style="flex-wrap:nowrap;gap:10px">${icon(i,44)}<div class="hand" style="font-size:31px;line-height:1">${t}</div></div>`).join("")}</div>
    <div style="align-self:flex-start;margin-top:8px;padding:10px 18px;border:5px double #B5352A;border-radius:10px;color:#B5352A;transform:perspective(600px) rotateX(10deg) rotate(-2deg);font-family:var(--type);font-size:24px;line-height:1.2">MISTERIO RESUELTO:<br><span class="hand" style="font-size:36px;color:var(--ink)">¡Jesús volverá y estaremos siempre con él!</span></div>
    <div style="background:var(--blue);color:#F5F0E4;padding:14px 20px;border-radius:6px;text-align:center;margin-top:auto"><div class="hand" style="font-size:31px;line-height:1.05">«Y si me fuere y os preparare lugar, vendré otra vez, y os tomaré a mí mismo, para que donde yo estoy, vosotros también estéis.»</div><div style="font-family:var(--type);font-size:17px;color:var(--gold);margin-top:4px">JUAN 14:3 · RVR1960</div></div>

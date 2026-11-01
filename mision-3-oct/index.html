@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* ===== Misión · Finlandia · 3 de octubre · «Solo un amigo» · CASO Nº 2 · mecánica estrella: linterna en el invierno polar ===== */
+/* ===== Misión · Finlandia · 3 de octubre · «Solo un amigo» · CASO Nº 1 · mecánica estrella: linterna en el invierno polar ===== */
 Object.assign(ICON,{
  m3suit:`<g ${S}><rect x="6" y="24" width="26" height="32" rx="4" fill="#C2674A"/><path d="M13 24v-6h12v6M6 36h26"/><rect x="34" y="30" width="24" height="26" rx="4" fill="#2F6F8F"/><path d="M40 30v-5h12v5M34 42h24"/><circle cx="12" cy="58" r="2" fill="#3A2E26"/><circle cx="27" cy="58" r="2" fill="#3A2E26"/></g>`,
  m3plane:`<g ${S}><path d="M6 38l48-18c5-2 7 4 3 6L12 46z" fill="#FDFBF5"/><path d="M26 31l-8-14h7l15 9M30 41l3 13h-7l-9-10"/><path d="M8 38l-2-10h5l5 7"/></g>`,
@@ -753,10 +753,10 @@ Object.assign(RET,{
 });
 
 /* ---------- el juego ---------- */
-const GAME={caseNo:2,caseTitle:"Solo un amigo",
+const GAME={caseNo:1,caseTitle:"Solo un amigo",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:620px;display:flex;flex-direction:column;gap:14px">
-   <div class="row" style="gap:10px"><span class="casebadge" style="font-size:20px">CASO Nº 2</span><span class="label">MISIÓN · FINLANDIA</span></div>
+   <div class="row" style="gap:10px"><span class="casebadge" style="font-size:20px">CASO Nº 1</span><span class="label">MISIÓN · FINLANDIA</span></div>
    <h1 style="font-size:70px;line-height:1.02">Solo un amigo</h1>
    <div class="clue" style="padding:10px 16px">${icon("m3flash",64)}<div class="t" style="font-size:31px">Un invierno largo y oscuro en Helsinki. ¡Coged la linterna y descubrid la historia de Katarina!</div></div>
    <div>${teamPickHTML}</div>

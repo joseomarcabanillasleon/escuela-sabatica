@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* Misión · Croacia · 10 oct — CASO Nº 4: Valiente por Jesús (Lucjica)
+/* Misión · Croacia · 10 oct — CASO Nº 3: Valiente por Jesús (Lucjica)
    Mecánica estrella: «Rosco de letras» — rueda 3D de letras: cada letra es una pregunta de la historia
    con opciones; se puede decir «¡Pasa!» y volver después; la rueda gira y se colorea verde/rojo. */
 Object.assign(ICON,{
@@ -670,10 +670,10 @@ Object.assign(RET,{
   paint();hook();setTimeout(next,350);}
 });
 
-const GAME={caseNo:4,caseTitle:"Valiente por Jesús",
+const GAME={caseNo:3,caseTitle:"Valiente por Jesús",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:620px;display:flex;flex-direction:column;gap:14px">
-   <div class="row" style="gap:10px;flex-wrap:nowrap"><span class="casebadge" style="font-size:20px">CASO Nº 4</span><span class="label" style="font-size:17px">MISIÓN · CROACIA · 10 OCT</span></div>
+   <div class="row" style="gap:10px;flex-wrap:nowrap"><span class="casebadge" style="font-size:20px">CASO Nº 3</span><span class="label" style="font-size:17px">MISIÓN · CROACIA · 10 OCT</span></div>
    <h1 style="font-size:64px;line-height:1.02">Valiente por Jesús</h1>
    <div class="hand" style="font-size:36px;line-height:1.02;color:#8E3B2B">Lucjica es la única adventista de su clase. Un día, la maestra le hizo una pregunta sorpresa…</div>
    <div style="margin-top:2px">${teamPickHTML}</div>

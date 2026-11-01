@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* ===== Misión · Reino Unido · Amarissa · CASO Nº 24 ===== */
+/* ===== Misión · Reino Unido · Amarissa · CASO Nº 23 ===== */
 const K9=`stroke="#3A2E26" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"`;
 Object.assign(ICON,{
  lupa:`<g ${S}><circle cx="26" cy="26" r="17" fill="#D6EEF5"/><path d="M39 39l16 16" stroke-width="8"/><path d="M17 21a10 10 0 0 1 8-7" stroke="#fff" stroke-width="3"/></g>`,
@@ -743,10 +743,10 @@ function frags(n,w,anim){return `<div class="row" style="gap:6px;justify-content
 async function playMelody(seq,timbre){for(const k of seq){play(KEYS[k].f,timbre,.5);await wait(520);}}
 
 const UK=DATA.map.c;const xy=k=>[UK[k].x,UK[k].y];
-const GAME={caseNo:24,caseTitle:"La melodía misteriosa",
+const GAME={caseNo:23,caseTitle:"La melodía misteriosa",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:620px;display:flex;flex-direction:column;gap:12px">
-   <div class="row" style="gap:10px"><span class="casebadge" style="font-size:20px">CASO Nº 24</span><span class="label">MISIÓN · REINO UNIDO · 19 DIC</span></div>
+   <div class="row" style="gap:10px"><span class="casebadge" style="font-size:20px">CASO Nº 23</span><span class="label">MISIÓN · REINO UNIDO · 19 DIC</span></div>
    <h1 style="font-size:62px;line-height:1.02">La melodía misteriosa</h1>
    <div class="clue" style="padding:10px 16px">${icon("violin",64)}<div class="t" style="font-size:30px">En Londres, alguien toca himnos con su violín en una orquesta. ¿Quién es? ¿Qué ha descubierto sobre la música?</div></div>
    <div>${teamPickHTML}</div>
@@ -826,7 +826,7 @@ const GAME={caseNo:24,caseTitle:"La melodía misteriosa",
    lesson:"Tu ofrenda ayudará a que muchos niños sepan que son valiosos, amados y que nunca están solos."}
  ],
  final:()=>`<div style="position:absolute;left:0;top:0;width:560px;bottom:0;display:flex;flex-direction:column;gap:10px">
-   <span class="label" style="align-self:flex-start;margin:6px 0 4px">CASO Nº 24 · RESUELTO</span>
+   <span class="label" style="align-self:flex-start;margin:6px 0 4px">CASO Nº 23 · RESUELTO</span>
    <div style="display:flex;gap:16px;align-items:center"><div style="background:#FFF6C9;border:3px solid #3A2E26;border-radius:12px;padding:8px;transform:perspective(800px) rotateY(12deg) rotateZ(-3deg);box-shadow:0 12px 24px rgba(0,0,0,.3)">${face(FICHAS[2],130)}<div style="font-family:var(--type);text-align:center;color:#B5352A">AMARISSA</div></div>
     <div class="hand" style="font-size:30px;line-height:1.05">La violinista misteriosa es <b>Amarissa</b>, 9 años, de la ELSOM (Londres).</div></div>
    <div style="background:#FDFBF5;border:3px dashed #9E7B4F;border-radius:10px;padding:10px 14px"><div style="font-family:var(--type);font-size:16px;color:#B5352A;letter-spacing:2px">LO QUE HA DESCUBIERTO</div><div class="hand" style="font-size:28px;line-height:1.05">Si practicas con paciencia, hasta lo difícil se convierte en algo hermoso.</div></div>

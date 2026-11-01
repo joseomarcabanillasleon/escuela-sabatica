@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* Misión · Croacia (17 oct): Nana — CASO Nº 6: Una maleta llena de biblias
+/* Misión · Croacia (17 oct): Nana — CASO Nº 5: Una maleta llena de biblias
    Mecánica estrella: «La maleta» — una maleta abierta en 3D con cuadrícula; se eligen, giran y encajan piezas
    (paquetes de biblias y «lo importante» de la historia) hasta llenarla; luego la tapa se cierra con animación.
    Reto de toda la clase: «La cadena de manos» (la maleta pesa: se pasa de niño en niño hasta el colegio). */
@@ -785,10 +785,10 @@ Object.assign(RET,{
  }
 });
 
-const GAME={caseNo:6,caseTitle:"Una maleta llena de biblias",
+const GAME={caseNo:5,caseTitle:"Una maleta llena de biblias",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:600px;display:flex;flex-direction:column;gap:12px">
-   <span class="label" style="align-self:flex-start">CASO Nº 6 · MISIÓN · CROACIA</span>
+   <span class="label" style="align-self:flex-start">CASO Nº 5 · MISIÓN · CROACIA</span>
    <h1 style="font-size:58px;line-height:1.02">Una maleta llena de biblias</h1>
    <div class="hand" style="font-size:42px;line-height:1;color:#8E3B2B">La historia de Nana</div>
    <div style="font-size:23px;line-height:1.2;max-width:580px">Un mensaje en el chat de clase, una maleta que pesa muchísimo… ¿Qué había dentro? ¡Abrid el caso!</div>

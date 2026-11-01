@@ -561,7 +561,7 @@ document.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 if("serviceWorker" in navigator&&location.protocol==="https:"&&location.hostname.endsWith("github.io")){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(()=>{});}
 </script>
 <script>
-/* ===== Lección 12 · Un hermoso nuevo mundo · CASO Nº 23 ===== */
+/* ===== Lección 12 · Un hermoso nuevo mundo · CASO Nº 24 ===== */
 const K12=`stroke="#3A2E26" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"`;
 Object.assign(ICON,{
  lupa:`<g ${S}><circle cx="26" cy="26" r="17" fill="#D6EEF5"/><path d="M39 39l16 16" stroke-width="8"/><path d="M17 21a10 10 0 0 1 8-7" stroke="#fff" stroke-width="3"/></g>`,
@@ -830,10 +830,10 @@ function l12note(f){if(muted)return;try{actx=actx||new(window.AudioContext||wind
 /* ---------- pistas (coleccionable) ---------- */
 function clueCards(n,w){const st=GAME.steps;return `<div class="row" style="gap:${w?6:10}px;justify-content:center;flex-wrap:nowrap">${st.map((s,i)=>`<div class="l12card ${i<n?(i===n-1&&!w?"new":""):"back"}" style="${w?`width:${w}px;height:${w*1.3}px`:""}"><div class="in"><div class="f">${icon(s.clue.i,w?w*.42:56)}<div class="pt">PISTA ${i+1}</div><div class="tx" style="${w?`font-size:${w*.16}px`:""}">${esc(s.clue.t)}</div></div><div class="b">?</div></div></div>`).join("")}</div>`;}
 
-const GAME={caseNo:23,caseTitle:"El lugar que nadie ha imaginado",
+const GAME={caseNo:24,caseTitle:"El lugar que nadie ha imaginado",
  cover:()=>`
   <div style="position:absolute;left:0;top:10px;width:620px;display:flex;flex-direction:column;gap:12px">
-   <div class="row" style="gap:10px"><span class="casebadge" style="font-size:20px">CASO Nº 23</span><span class="label">LECCIÓN 12</span></div>
+   <div class="row" style="gap:10px"><span class="casebadge" style="font-size:20px">CASO Nº 24</span><span class="label">LECCIÓN 12</span></div>
    <h1 style="font-size:60px;line-height:1.02">Un hermoso nuevo mundo</h1>
    <div class="clue" style="padding:10px 16px">${icon("lupa",64)}<div class="t" style="font-size:30px">Jesús dijo: «Voy, pues, a preparar lugar para vosotros». ¿Dónde está? ¿Cómo será?</div></div>
    <div><span class="ref">${UI.book} Juan 14:2</span></div>
@@ -914,7 +914,7 @@ const GAME={caseNo:23,caseTitle:"El lugar que nadie ha imaginado",
    lesson:"Mientras llega ese día: estudia la Biblia y guarda tus preguntas para Jesús."}
  ],
  final:()=>`<div style="position:absolute;left:0;top:0;width:610px;bottom:0;display:flex;flex-direction:column;gap:10px">
-   <span class="label" style="align-self:flex-start;margin:6px 0 8px">CASO Nº 23 · RESUELTO</span>
+   <span class="label" style="align-self:flex-start;margin:6px 0 8px">CASO Nº 24 · RESUELTO</span>
    <div style="position:relative;background:#FDFBF5;padding:8px;box-shadow:0 12px 24px rgba(0,0,0,.3);transform:perspective(1200px) rotateX(10deg) rotateZ(-1.5deg)"><div class="tape" style="top:-12px;left:240px;transform:rotate(-3deg)"></div><svg viewBox="0 0 1600 900" width="594" height="300" aria-hidden="true">${sceneSVG("finS",new Set(INTR))}</svg></div>
    <div class="hand" style="font-size:32px;line-height:1">El lugar misterioso es…</div>
    <h1 style="font-size:52px;line-height:1;color:#2F5E2A">¡La Tierra Nueva!</h1>
